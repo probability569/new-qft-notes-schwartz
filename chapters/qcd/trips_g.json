@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "nodes": [],
+  "edges": [
+    {
+      "id": "edge_1786138313650",
+      "x1": 150,
+      "y1": 175,
+      "x2": 200,
+      "y2": 175,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "gluon",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1786138315808",
+      "x1": 200,
+      "y1": 175,
+      "x2": 225,
+      "y2": 125,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "gluon",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1786138317162",
+      "x1": 200,
+      "y1": 175,
+      "x2": 225,
+      "y2": 225,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "gluon",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "label_1786138362892",
+      "text": "$mu; a$",
+      "x": 230.2404327392578,
+      "y": 111.86756896972656
+    },
+    {
+      "id": "label_1786138367977",
+      "text": "$nu; b$",
+      "x": 115.24042510986328,
+      "y": 174.01043701171875
+    },
+    {
+      "id": "label_1786138375394",
+      "text": "$rho; c$",
+      "x": 225,
+      "y": 225
+    },
+    {
+      "id": "label_1786138387036",
+      "text": "$p$",
+      "x": 165.9547119140625,
+      "y": 158.296142578125
+    },
+    {
+      "id": "label_1786138391425",
+      "text": "$q$",
+      "x": 230.9547119140625,
+      "y": 191.86756896972656
+    },
+    {
+      "id": "label_1786138395002",
+      "text": "$k$",
+      "x": 200.9547119140625,
+      "y": 134.72471618652344
+    }
+  ],
+  "shapes": []
+}

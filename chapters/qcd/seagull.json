@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "nodes": [],
+  "edges": [
+    {
+      "id": "edge_1786150100549",
+      "x1": 175,
+      "y1": 75,
+      "x2": 225,
+      "y2": 125,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "gluon",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1786150103765",
+      "x1": 225,
+      "y1": 125,
+      "x2": 275,
+      "y2": 75,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "gluon",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1786150110426",
+      "x1": 175,
+      "y1": 175,
+      "x2": 225,
+      "y2": 125,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1786150111281",
+      "x1": 225,
+      "y1": 125,
+      "x2": 275,
+      "y2": 175,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "label_1786150123192",
+      "text": "$i$",
+      "x": 166.28660583496094,
+      "y": 182.08067321777344
+    },
+    {
+      "id": "label_1786150139252",
+      "text": "$j$",
+      "x": 281.924072265625,
+      "y": 181.63246154785156
+    }
+  ],
+  "shapes": []
+}

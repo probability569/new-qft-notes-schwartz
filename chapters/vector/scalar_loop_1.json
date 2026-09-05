@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "nodes": [],
+  "edges": [
+    {
+      "id": "edge_1785355028782",
+      "x1": 125,
+      "y1": 175,
+      "x2": 200,
+      "y2": 175,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "wavy",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785355030232",
+      "x1": 250,
+      "y1": 175,
+      "x2": 325,
+      "y2": 175,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "wavy",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785355035452",
+      "x1": 200,
+      "y1": 175,
+      "x2": 250,
+      "y2": 175,
+      "curvature": -25,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785355042966",
+      "x1": 250,
+      "y1": 175,
+      "x2": 200,
+      "y2": 175,
+      "curvature": -25,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "label_1785355060762",
+      "text": "$p$",
+      "x": 150,
+      "y": 150
+    },
+    {
+      "id": "label_1785355064191",
+      "text": "$p+k$",
+      "x": 225,
+      "y": 125
+    },
+    {
+      "id": "label_1785355066821",
+      "text": "$p$",
+      "x": 300,
+      "y": 150
+    },
+    {
+      "id": "label_1785355072695",
+      "text": "$k$",
+      "x": 225,
+      "y": 225
+    },
+    {
+      "id": "label_1785355087222",
+      "text": "$gamma$",
+      "x": 125,
+      "y": 200
+    },
+    {
+      "id": "label_1785355089784",
+      "text": "$gamma$",
+      "x": 325,
+      "y": 200
+    }
+  ],
+  "shapes": []
+}

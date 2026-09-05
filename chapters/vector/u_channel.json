@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "nodes": [],
+  "edges": [
+    {
+      "id": "edge_1785455852566",
+      "x1": 175,
+      "y1": 125,
+      "x2": 175,
+      "y2": 175,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "wavy",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785455858054",
+      "x1": 125,
+      "y1": 100,
+      "x2": 175,
+      "y2": 125,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785455860307",
+      "x1": 125,
+      "y1": 200,
+      "x2": 175,
+      "y2": 175,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785455862440",
+      "x1": 175,
+      "y1": 175,
+      "x2": 225,
+      "y2": 100,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785455864117",
+      "x1": 175,
+      "y1": 125,
+      "x2": 225,
+      "y2": 200,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "label_1785455888219",
+      "text": "$p_1$",
+      "x": 131.03448486328125,
+      "y": 89.556396484375
+    },
+    {
+      "id": "label_1785455896446",
+      "text": "$p_2$",
+      "x": 138.50575256347656,
+      "y": 177.4874267578125
+    },
+    {
+      "id": "label_1785455902556",
+      "text": "$p_3$",
+      "x": 222.41378784179688,
+      "y": 130.93569946289062
+    },
+    {
+      "id": "label_1785455906282",
+      "text": "$p_4$",
+      "x": 225.86207580566406,
+      "y": 176.33799743652344
+    }
+  ],
+  "shapes": []
+}

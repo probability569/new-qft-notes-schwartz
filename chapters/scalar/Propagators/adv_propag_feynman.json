@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "nodes": [],
+  "edges": [
+    {
+      "id": "edge_1783052974523",
+      "x1": 125,
+      "y1": 200,
+      "x2": 200,
+      "y2": 150,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "solid",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1783052975822",
+      "x1": 200,
+      "y1": 150,
+      "x2": 325,
+      "y2": 200,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "solid",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1783052978205",
+      "x1": 250,
+      "y1": 75,
+      "x2": 325,
+      "y2": 25,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "solid",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1783052979721",
+      "x1": 250,
+      "y1": 75,
+      "x2": 125,
+      "y2": 25,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "solid",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1783052991156",
+      "x1": 225,
+      "y1": 50,
+      "x2": 225,
+      "y2": 175,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1783053828717",
+      "x1": 250,
+      "y1": 75,
+      "x2": 200,
+      "y2": 150,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "wavy",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "label_1783053549694",
+      "text": "$e^-_4$",
+      "x": 335,
+      "y": 210
+    },
+    {
+      "id": "label_1783053576681",
+      "text": "$e^-_3$",
+      "x": 335,
+      "y": 15
+    },
+    {
+      "id": "label_1783053582724",
+      "text": "$e^-_1$",
+      "x": 115,
+      "y": 15
+    },
+    {
+      "id": "label_1783053592797",
+      "text": "$e^-_2$",
+      "x": 115,
+      "y": 210
+    },
+    {
+      "id": "label_1783053608391",
+      "text": "$arrow(p_1)$",
+      "x": 175,
+      "y": 55
+    },
+    {
+      "id": "label_1783053624062",
+      "text": "$arrow(p_2)$",
+      "x": 150,
+      "y": 170
+    },
+    {
+      "id": "label_1783053643463",
+      "text": "$arrow(p_4)$",
+      "x": 290,
+      "y": 175
+    },
+    {
+      "id": "label_1783053652488",
+      "text": "$arrow(p_3)$",
+      "x": 300,
+      "y": 55
+    }
+  ],
+  "shapes": []
+}

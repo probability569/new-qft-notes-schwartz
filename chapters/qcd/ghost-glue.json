@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "nodes": [],
+  "edges": [
+    {
+      "id": "edge_1786140983180",
+      "x1": 225,
+      "y1": 100,
+      "x2": 225,
+      "y2": 150,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "gluon",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1786140990213",
+      "x1": 175,
+      "y1": 175,
+      "x2": 225,
+      "y2": 150,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 2,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1786140991096",
+      "x1": 225,
+      "y1": 150,
+      "x2": 275,
+      "y2": 175,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 2,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "label_1786141109997",
+      "text": "$c^a$",
+      "x": 167.02806091308594,
+      "y": 183.00083923339844
+    },
+    {
+      "id": "label_1786141152971",
+      "text": "$macron(c)^c$",
+      "x": 280.676025390625,
+      "y": 184.7227783203125
+    },
+    {
+      "id": "label_1786141161943",
+      "text": "$mu;b$",
+      "x": 224.426025390625,
+      "y": 81.40645599365234
+    }
+  ],
+  "shapes": []
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>§1.1 Existence of Atoms and Atomic Structure | Notes on QFT</title><meta name="authors" content="Probability Floor"><style>/* Alignment */
+mtable.right-align mtd,
+mtable mtd.right-align,
+mtable.left-align mtd.right-align,
+mtable.aligned mtd:nth-child(odd) {
+  justify-items: end;
+  text-align: right;
+}
+mtable.cases mtd,
+mtable.left-align mtd,
+mtable mtd.left-align,
+mtable.aligned mtd:nth-child(even),
+math:is(:not([display])) > mtable.multiline-equation mtd {
+  justify-items: start;
+  text-align: left;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.left-flush {
+  padding-left: 0;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.right-flush {
+  padding-right: 0;
+}
+
+/* Tables */
+mtable {
+  math-style: inherit;
+}
+mtd {
+  math-depth: auto-add;
+  math-style: compact;
+  math-shift: compact;
+}
+
+/* Equations */
+mtable.multiline-equation mtd {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+  padding: 0;
+}
+math > mtable.multiline-equation mtr:not(:last-child) mtd {
+  padding-bottom: 0.5em;
+}
+
+/* Fractions */
+mfrac {
+  padding-inline: 0;
+  margin-inline: 0.1em;
+}
+
+/* Accents */
+mover[accent="true" i] > :first-child {
+  font-feature-settings: "dtls";
+}
+mover.dotted[accent="true" i] > :first-child {
+  font-feature-settings: "dtls" 0;
+}
+
+/* Other rules for scriptlevel, displaystyle and math-shift */
+munder > :nth-child(2),
+munderover > :nth-child(2) {
+  math-shift: compact
+}
+munder[accentunder="true" i] > :not(:first-child),
+mover[accent="true" i] > :not(:first-child) {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+}</style></head><body><link rel="stylesheet" href="../../assets/site.css"><link rel="stylesheet" href="../../assets/search.css"><header class="topbar"><div class="topbar-left"><button class="icon-button sidebar-toggle" id="sidebar-toggle-left" aria-label="Menu"><img class="icon" src="../../assets/menu.svg" alt="Menu"></button><a class="topbar-title" href="../../index.html">Notes on QFT</a></div><form class="topbar-search" data-search-form="true" role="search" action="../../search/" method="get"><input class="search-input" type="search" name="q" placeholder="Search..." autocomplete="off" aria-label="Search the site"><button class="search-submit icon-button" type="submit" aria-label="Search"><img class="icon" src="../../assets/search.svg" alt="Search"></button></form><div class="topbar-right"><button class="icon-button theme-toggle" aria-label="Toggle theme"><img class="icon" src="../../assets/theme.svg" alt="Theme"></button><button class="icon-button print-button" type="button" aria-label="Print page" title="Print"><img class="icon" src="../../assets/print.svg" alt="Print"></button><a class="icon-button export-pdf-link" href="../../pdf/notes.pdf" aria-label="Export PDF" title="Export PDF"><img class="icon" src="../../assets/download.svg" alt="Export PDF"></a><a class="icon-button github-link" href="https://github.com/probability569/qft-notes-schwartz" aria-label="GitHub source"><img class="icon" src="../../assets/github.svg" alt="GitHub"></a><button class="icon-button sidebar-toggle" id="sidebar-toggle-right" aria-label="Page contents"><img class="icon" src="../../assets/toc.svg" alt="Contents"></button></div></header><div class="layout"><aside class="sidebar-left"><nav class="global-nav" aria-label="Site navigation"><ul><li class="nav-item" style="--depth: 0"><a href="../../index.html">Cover</a></li><li class="nav-item" style="--depth: 0"><a href="../../preface/">Preface</a></li><li class="nav-item" style="--depth: 0"><a href="../../Atoms/">Chapter 1: Atoms</a></li><li class="nav-item active" style="--depth: 1"><a href="../../Atoms/existence/">§1.1 Existence of Atoms and Atomic Structure</a></li><li class="nav-item" style="--depth: 1"><a href="../../Atoms/schrondinger/">§1.2 The Schrödinger Equation</a></li><li class="nav-item" style="--depth: 1"><a href="../../Atoms/orbitals/">§1.3 Atomic Orbitals</a></li><li class="nav-item" style="--depth: 0"><a href="../../bibliography/">Bibliography</a></li></ul></nav></aside><main class="content" id="main"><h1 class="page-title">§1.1 Existence of Atoms and Atomic Structure</h1><div class="page-source-heading"><h3 id="loc-1">1.1 Existence of Atoms and Atomic Structure</h3></div><p>From Dalton’s Law of Definite Proportions and the Greek’s cutting argument, it becomes rather convincing that there is a small unit of matter. Given a microscope, Brownian motion further verifies the existence of such smallest unit of matter, define it as an <em>atom</em>.</p><p>Via radioactive material or Hydrogen gas in plasma phase, subatomic particles can be found to have charge and their charge-to-mass ratio may be determined through mass spectrometry. The Oil Drop Experiment <a id="loc-2" href="../../bibliography/index.html#loc-2" role="doc-biblioref">[1]</a> gives the charge. Hence, the mass is known. Rutherford’s experiment of bombarding gold foil with <math><mi>𝛼</mi></math> particles from <math><msub><mtext>RaBr</mtext><mn>2</mn></msub></math> then shows the existence of positively charged nuclei and its size relative to the atom. The size of an atom may be found through X-ray Crystallography, by diffraction to get the distance between two nuclei. The charge-to-mass ratio of an electron (or <math><mi>𝛽</mi></math> particle) then reveals the mass of the electron.</p><p>However, Newtonian mechanics would give the speed of the electron to be faster than light, which is impossible from Maxwell’s equations. The break-through point lies in the ultraviolet catastrophe motivates the postulate of quantized energy, which gives rise to planck’s constant. The same constant is then observed in the photoelectric effect as</p><div class="display-math"><math display="block"><mi>𝐸</mi><mo>=</mo><mi>ℎ</mi><mi>𝜈</mi><mo>,</mo><a class="eq-tag">(1.1.1)</a></math></div><p>and is verified by the fact that the excitation of the electrons dependent on the frequency but not intensity of the incident light. This assumption gives the particle-like description of light, the <em>photon</em>; however, Thomas Young showed in the Double Slit Experiment that light is also a particle. The particle light duality of light and the equation for its momentum <math><mi>𝑝</mi><mo>=</mo><mfrac><mi>𝐸</mi><mi>𝜆</mi></mfrac></math> motivates the wave description for matter.</p><nav class="page-nav" aria-label="Previous and next pages"><a class="page-nav-card nav-prev" href="../../Atoms/"><span class="page-nav-arrow">←</span><span class="page-nav-kicker">Previous</span><span class="page-nav-title">Chapter 1: Atoms</span></a><a class="page-nav-card nav-next" href="../../Atoms/schrondinger/"><span class="page-nav-kicker">Next</span><span class="page-nav-title">§1.2 The Schrödinger Equation</span><span class="page-nav-arrow">→</span></a></nav></main><aside class="sidebar-right"><nav class="local-toc" aria-label="On this page"><h2>On This Page</h2><ul><li class="toc-heading" style="--toc-depth: 0"><a href="#loc-1">§1.1 Existence of Atoms and Atomic Structure</a></li></ul></nav></aside></div><div class="sidebar-backdrop" id="sidebar-backdrop"></div><script src="../../assets/site.js"></script><script src="../../assets/search.js"></script></body></html>

@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": "node_1785277864571",
+      "x": 225,
+      "y": 100,
+      "radius": 2,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "fillColor": "#ffffff",
+      "fillType": "solid",
+      "nodeStyle": "solid",
+      "patAngle": 45,
+      "patColor": "#000000",
+      "patWidth": 2,
+      "patSpacing": 4
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_1785277873387",
+      "x1": 175,
+      "y1": 50,
+      "x2": 225,
+      "y2": 100,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785277874571",
+      "x1": 225,
+      "y1": 100,
+      "x2": 175,
+      "y2": 150,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785277883273",
+      "x1": 225,
+      "y1": 100,
+      "x2": 300,
+      "y2": 100,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "wavy",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "label_1785277902996",
+      "text": "$e^-$",
+      "x": 172.95413208007812,
+      "y": 31.70102882385254
+    },
+    {
+      "id": "label_1785277907273",
+      "text": "$e^+$",
+      "x": 172.05770874023438,
+      "y": 167.50779724121094
+    },
+    {
+      "id": "label_1785277918424",
+      "text": "$p_1$",
+      "x": 171.60951232910156,
+      "y": 71.59146881103516
+    },
+    {
+      "id": "label_1785277923300",
+      "text": "$p_2$",
+      "x": 168.92025756835938,
+      "y": 131.65122985839844
+    },
+    {
+      "id": "label_1785277928118",
+      "text": "$gamma$",
+      "x": 260.3545227050781,
+      "y": 82.34844207763672
+    }
+  ],
+  "shapes": []
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Chapter 2: Classical Field Theory | Notes on QFT</title><meta name="authors" content="Probability Floor"><style>/* Alignment */
+mtable.right-align mtd,
+mtable mtd.right-align,
+mtable.left-align mtd.right-align,
+mtable.aligned mtd:nth-child(odd) {
+  justify-items: end;
+  text-align: right;
+}
+mtable.cases mtd,
+mtable.left-align mtd,
+mtable mtd.left-align,
+mtable.aligned mtd:nth-child(even),
+math:is(:not([display])) > mtable.multiline-equation mtd {
+  justify-items: start;
+  text-align: left;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.left-flush {
+  padding-left: 0;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.right-flush {
+  padding-right: 0;
+}
+
+/* Tables */
+mtable {
+  math-style: inherit;
+}
+mtd {
+  math-depth: auto-add;
+  math-style: compact;
+  math-shift: compact;
+}
+
+/* Equations */
+mtable.multiline-equation mtd {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+  padding: 0;
+}
+math > mtable.multiline-equation mtr:not(:last-child) mtd {
+  padding-bottom: 0.5em;
+}
+
+/* Fractions */
+mfrac {
+  padding-inline: 0;
+  margin-inline: 0.1em;
+}
+
+/* Accents */
+mover[accent="true" i] > :first-child {
+  font-feature-settings: "dtls";
+}
+mover.dotted[accent="true" i] > :first-child {
+  font-feature-settings: "dtls" 0;
+}
+
+/* Other rules for scriptlevel, displaystyle and math-shift */
+munder > :nth-child(2),
+munderover > :nth-child(2) {
+  math-shift: compact
+}
+munder[accentunder="true" i] > :not(:first-child),
+mover[accent="true" i] > :not(:first-child) {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+}</style></head><body><link rel="stylesheet" href="../assets/site.css"><link rel="stylesheet" href="../assets/search.css"><header class="topbar"><div class="topbar-left"><button class="icon-button sidebar-toggle" id="sidebar-toggle-left" aria-label="Menu"><img class="icon" src="../assets/menu.svg" alt="Menu"></button><a class="topbar-title" href="../index.html">Notes on QFT</a></div><form class="topbar-search" data-search-form="true" role="search" action="../search/" method="get"><input class="search-input" type="search" name="q" placeholder="Search..." autocomplete="off" aria-label="Search the site"><button class="search-submit icon-button" type="submit" aria-label="Search"><img class="icon" src="../assets/search.svg" alt="Search"></button></form><div class="topbar-right"><button class="icon-button theme-toggle" aria-label="Toggle theme"><img class="icon" src="../assets/theme.svg" alt="Theme"></button><button class="icon-button print-button" type="button" aria-label="Print page" title="Print"><img class="icon" src="../assets/print.svg" alt="Print"></button><a class="icon-button export-pdf-link" href="../pdf/notes.pdf" aria-label="Export PDF" title="Export PDF"><img class="icon" src="../assets/download.svg" alt="Export PDF"></a><a class="icon-button github-link" href="https://github.com/probability569/qft-notes-schwartz" aria-label="GitHub source"><img class="icon" src="../assets/github.svg" alt="GitHub"></a><button class="icon-button sidebar-toggle" id="sidebar-toggle-right" aria-label="Page contents"><img class="icon" src="../assets/toc.svg" alt="Contents"></button></div></header><div class="layout"><aside class="sidebar-left"><nav class="global-nav" aria-label="Site navigation"><ul><li class="nav-item" style="--depth: 0"><a href="../index.html">Cover</a></li><li class="nav-item" style="--depth: 0"><a href="../preface/">Preface</a></li><li class="nav-item" style="--depth: 0"><a href="../prereq/">1 Mathematical Prerequisite and Notations</a></li><li class="nav-item" style="--depth: 1"><a href="../prereq/lin-alg/">§1.1 Linear Algebra Review</a></li><li class="nav-item active" style="--depth: 0"><a href="../cft/">Chapter 2: Classical Field Theory</a></li><li class="nav-item" style="--depth: 0"><a href="../bibliography/">Bibliography</a></li></ul></nav></aside><main class="content" id="main"><h1 class="page-title">Chapter 2: Classical Field Theory</h1><div class="page-source-heading"><h2 id="loc-1">2 Classical Field Theory</h2></div><h3 id="loc-2">2.1 Classical Field Theory</h3><ul><li>The idea behind <strong>classical field theory</strong> is to utilize the idea of Lagrangians that will be presented in <em>Lagrangians</em> and in <em>Classical Symmetries</em> to obtain a “toy theory” without the quantum effects that will later appear such as Loops in diagrams, etc. In practice, this means that it is essentially the <em>Lagrangian Formalism</em> of Classical Mechanics where <em>position</em> and <em>momentum</em> coordinates <math><mrow><mo>(</mo><mrow><mi>𝑝</mi><mo>,</mo><mi>𝑞</mi></mrow><mo>)</mo></mrow></math> are replaced by fields <math><mrow><mo>(</mo><mrow><mi>𝜙</mi><mo>,</mo><mi>𝜋</mi></mrow><mo>)</mo></mrow></math>, as seen before in <em>Lagrangians</em> without having been explicitly stated.</li><li>Classical Field Theory, much like <em>Classical Mechanics</em>, functions as the unquantized equivalent to Quantum Field Theory. Quantization does not require much to achieve as simply putting quantization conditions on the operators being used acheives it with relative ease.</li></ul><span id="loc-3"></span><div class="thm-box thm-example" id="thm-example-2-1-1"><p class="thm-head"><strong>Example 2.1.1</strong> (Klein Gordon Equation).</p><ul><li>A very standard equation for a field in Classical Field theory is the <em>Klein Gordon Equation</em>. (This, in fact, describes a <em>free</em> field in which there are no interactions, allowing for a very good “toy theory” to use and potentially apply later).</li></ul><div class="display-math"><math display="block"><mrow><mo>(</mo><mrow><mi>□</mi><mo>+</mo><msup><mi>𝑚</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mi>𝜙</mi><mo>=</mo><mn>0</mn></math></div><p>or</p><div class="display-math"><math display="block"><mrow><mo>(</mo><mrow><msup><mi>𝜕</mi><mn>2</mn></msup><mo>+</mo><msup><mi>𝑚</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mi>𝜙</mi><mo>=</mo><mn>0</mn></math></div><p>is the <em>Klein Gordon Equation</em>.</p></div><nav class="page-nav" aria-label="Previous and next pages"><a class="page-nav-card nav-prev" href="../prereq/lin-alg/"><span class="page-nav-arrow">←</span><span class="page-nav-kicker">Previous</span><span class="page-nav-title">§1.1 Linear Algebra Review</span></a><a class="page-nav-card nav-next" href="../bibliography/"><span class="page-nav-kicker">Next</span><span class="page-nav-title">Bibliography</span><span class="page-nav-arrow">→</span></a></nav></main><aside class="sidebar-right"><nav class="local-toc" aria-label="On this page"><h2>On This Page</h2><ul><li class="toc-heading" style="--toc-depth: 0"><a href="#loc-1">Chapter 2: Classical Field Theory</a></li><li class="toc-heading" style="--toc-depth: 0"><a href="#loc-2">§2.1 Classical Field Theory</a></li><li class="toc-theorem" style="--toc-depth: 1"><a href="#loc-3">Example 2.1.1 (Klein Gordon Equation)</a></li></ul></nav></aside></div><div class="sidebar-backdrop" id="sidebar-backdrop"></div><script src="../assets/site.js"></script><script src="../assets/search.js"></script></body></html>

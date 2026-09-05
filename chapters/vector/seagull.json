@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "nodes": [],
+  "edges": [
+    {
+      "id": "edge_1785454688818",
+      "x1": 150,
+      "y1": 50,
+      "x2": 200,
+      "y2": 100,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "wavy",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785454690404",
+      "x1": 250,
+      "y1": 50,
+      "x2": 200,
+      "y2": 100,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "wavy",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785454697269",
+      "x1": 150,
+      "y1": 150,
+      "x2": 200,
+      "y2": 100,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785454699248",
+      "x1": 200,
+      "y1": 100,
+      "x2": 250,
+      "y2": 150,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "label_1785454722231",
+      "text": "$mu$",
+      "x": 149.0306396484375,
+      "y": 37.30974578857422
+    },
+    {
+      "id": "label_1785454724188",
+      "text": "$nu$",
+      "x": 249.42904663085938,
+      "y": 38.20616149902344
+    },
+    {
+      "id": "label_1785454728324",
+      "text": "$e^-$",
+      "x": 141.41111755371094,
+      "y": 162.80775451660156
+    },
+    {
+      "id": "label_1785454737220",
+      "text": "$e^-$",
+      "x": 248.9808349609375,
+      "y": 162.80775451660156
+    }
+  ],
+  "shapes": []
+}
