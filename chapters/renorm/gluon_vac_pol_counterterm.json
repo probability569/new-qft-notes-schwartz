@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": "node_1786154774458",
+      "x": 225,
+      "y": 125,
+      "radius": 10,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "fillColor": "#ffffff",
+      "fillType": "solid",
+      "nodeStyle": "otimes",
+      "patAngle": 45,
+      "patColor": "#000000",
+      "patWidth": 2,
+      "patSpacing": 4
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_1786154749376",
+      "x1": 150,
+      "y1": 125,
+      "x2": 225,
+      "y2": 125,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "gluon",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1786154752859",
+      "x1": 225,
+      "y1": 125,
+      "x2": 300,
+      "y2": 125,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "gluon",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    }
+  ],
+  "labels": [],
+  "shapes": []
+}

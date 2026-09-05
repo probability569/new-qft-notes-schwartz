@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "nodes": [],
+  "edges": [
+    {
+      "id": "edge_1786140773406",
+      "x1": 200,
+      "y1": 75,
+      "x2": 200,
+      "y2": 125,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "gluon",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1786140779495",
+      "x1": 150,
+      "y1": 150,
+      "x2": 200,
+      "y2": 125,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "solid",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1786140780278",
+      "x1": 200,
+      "y1": 125,
+      "x2": 250,
+      "y2": 150,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "solid",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "label_1786140797195",
+      "text": "$i$",
+      "x": 138.9459686279297,
+      "y": 156.98106384277344
+    },
+    {
+      "id": "label_1786140799751",
+      "text": "$j$",
+      "x": 258.6172790527344,
+      "y": 156.53285217285156
+    }
+  ],
+  "shapes": []
+}

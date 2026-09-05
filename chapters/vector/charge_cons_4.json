@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": "node_1785516496925",
+      "x": 225,
+      "y": 150,
+      "radius": 8,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "fillColor": "#ffffff",
+      "fillType": "solid",
+      "nodeStyle": "diamond",
+      "patAngle": 45,
+      "patColor": "#000000",
+      "patWidth": 2,
+      "patSpacing": 4
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_1785516474908",
+      "x1": 225,
+      "y1": 150,
+      "x2": 275,
+      "y2": 150,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785516475908",
+      "x1": 275,
+      "y1": 150,
+      "x2": 325,
+      "y2": 100,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785516484688",
+      "x1": 275,
+      "y1": 150,
+      "x2": 325,
+      "y2": 200,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "wavy",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "label_1785516507552",
+      "text": "$p_i$",
+      "x": 253.4482879638672,
+      "y": 135.91954040527344
+    },
+    {
+      "id": "label_1785516526061",
+      "text": "$p_i-q$",
+      "x": 292.52874755859375,
+      "y": 112.5448989868164
+    },
+    {
+      "id": "label_1785516528887",
+      "text": "$q$",
+      "x": 313.2183837890625,
+      "y": 166.56790161132812
+    }
+  ],
+  "shapes": []
+}

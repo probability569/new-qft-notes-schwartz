@@ -1,0 +1,2 @@
+= Scalars
+- Scalar Field Theory is _a_ theory of quantum fields. It is mostly used as a toy theory to base other theories off of, since out of the many _many_ particles that exist (dozens counting baryons), there is an entirety of *1* scalar particle (the Higgs boson). Therefore, Scalar Field Theory primarily is only useful to base other models of the universe off of it as opposed to modeling the universe after it. 

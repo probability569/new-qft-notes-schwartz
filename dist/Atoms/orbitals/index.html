@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>§1.3 Atomic Orbitals | Notes on QFT</title><meta name="authors" content="Probability Floor"><style>/* Alignment */
+mtable.right-align mtd,
+mtable mtd.right-align,
+mtable.left-align mtd.right-align,
+mtable.aligned mtd:nth-child(odd) {
+  justify-items: end;
+  text-align: right;
+}
+mtable.cases mtd,
+mtable.left-align mtd,
+mtable mtd.left-align,
+mtable.aligned mtd:nth-child(even),
+math:is(:not([display])) > mtable.multiline-equation mtd {
+  justify-items: start;
+  text-align: left;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.left-flush {
+  padding-left: 0;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.right-flush {
+  padding-right: 0;
+}
+
+/* Tables */
+mtable {
+  math-style: inherit;
+}
+mtd {
+  math-depth: auto-add;
+  math-style: compact;
+  math-shift: compact;
+}
+
+/* Equations */
+mtable.multiline-equation mtd {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+  padding: 0;
+}
+math > mtable.multiline-equation mtr:not(:last-child) mtd {
+  padding-bottom: 0.5em;
+}
+
+/* Fractions */
+mfrac {
+  padding-inline: 0;
+  margin-inline: 0.1em;
+}
+
+/* Accents */
+mover[accent="true" i] > :first-child {
+  font-feature-settings: "dtls";
+}
+mover.dotted[accent="true" i] > :first-child {
+  font-feature-settings: "dtls" 0;
+}
+
+/* Other rules for scriptlevel, displaystyle and math-shift */
+munder > :nth-child(2),
+munderover > :nth-child(2) {
+  math-shift: compact
+}
+munder[accentunder="true" i] > :not(:first-child),
+mover[accent="true" i] > :not(:first-child) {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+}</style></head><body><link rel="stylesheet" href="../../assets/site.css"><link rel="stylesheet" href="../../assets/search.css"><header class="topbar"><div class="topbar-left"><button class="icon-button sidebar-toggle" id="sidebar-toggle-left" aria-label="Menu"><img class="icon" src="../../assets/menu.svg" alt="Menu"></button><a class="topbar-title" href="../../index.html">Notes on QFT</a></div><form class="topbar-search" data-search-form="true" role="search" action="../../search/" method="get"><input class="search-input" type="search" name="q" placeholder="Search..." autocomplete="off" aria-label="Search the site"><button class="search-submit icon-button" type="submit" aria-label="Search"><img class="icon" src="../../assets/search.svg" alt="Search"></button></form><div class="topbar-right"><button class="icon-button theme-toggle" aria-label="Toggle theme"><img class="icon" src="../../assets/theme.svg" alt="Theme"></button><button class="icon-button print-button" type="button" aria-label="Print page" title="Print"><img class="icon" src="../../assets/print.svg" alt="Print"></button><a class="icon-button export-pdf-link" href="../../pdf/notes.pdf" aria-label="Export PDF" title="Export PDF"><img class="icon" src="../../assets/download.svg" alt="Export PDF"></a><a class="icon-button github-link" href="https://github.com/probability569/qft-notes-schwartz" aria-label="GitHub source"><img class="icon" src="../../assets/github.svg" alt="GitHub"></a><button class="icon-button sidebar-toggle" id="sidebar-toggle-right" aria-label="Page contents"><img class="icon" src="../../assets/toc.svg" alt="Contents"></button></div></header><div class="layout"><aside class="sidebar-left"><nav class="global-nav" aria-label="Site navigation"><ul><li class="nav-item" style="--depth: 0"><a href="../../index.html">Cover</a></li><li class="nav-item" style="--depth: 0"><a href="../../preface/">Preface</a></li><li class="nav-item" style="--depth: 0"><a href="../../Atoms/">Chapter 1: Atoms</a></li><li class="nav-item" style="--depth: 1"><a href="../../Atoms/existence/">§1.1 Existence of Atoms and Atomic Structure</a></li><li class="nav-item" style="--depth: 1"><a href="../../Atoms/schrondinger/">§1.2 The Schrödinger Equation</a></li><li class="nav-item active" style="--depth: 1"><a href="../../Atoms/orbitals/">§1.3 Atomic Orbitals</a></li><li class="nav-item" style="--depth: 0"><a href="../../bibliography/">Bibliography</a></li></ul></nav></aside><main class="content" id="main"><h1 class="page-title">§1.3 Atomic Orbitals</h1><div class="page-source-heading"><h3 id="loc-1">1.3 Atomic Orbitals</h3></div><p>Eigenfunctions from <a href="../schrondinger/index.html#loc-2">(1.2.1)</a><math class="typst-multi-label-list"><mtext class="typst-multi-label"><a href="../../pdf/notes.pdf#loc-7">(1.2.1)</a></mtext><mtext class="typst-multi-label"><a href="../schrondinger/index.html#loc-2">(1.2.1)</a></mtext></math> gives wave function for a given nucleus to be described by three quantum numbers.</p><p>The principal quantum number <math><mi>𝑛</mi></math> is a positive integer that determines the binding energy of an electron assuming single electron <a href="../schrondinger/index.html#loc-3">(1.2.2)</a><math class="typst-multi-label-list"><mtext class="typst-multi-label"><a href="../../pdf/notes.pdf#loc-8">(1.2.2)</a></mtext><mtext class="typst-multi-label"><a href="../schrondinger/index.html#loc-3">(1.2.2)</a></mtext></math>. In this case of multiple electrons, there may be a correction term due to electron repulsion that is relatively small compared to the term given by <a href="../../pdf/notes.pdf#loc-8">(1.2.2)</a>. Hence, categorize all electrons in an atom by this number gives the shell of the electron.</p><p>The orbital angular momentum quantum number <math><mi>ℓ</mi></math> takes value from <math><mi>ℓ</mi><mo>=</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>𝑛</mi><mo>−</mo><mn>1</mn></math>. It determines the angular-momentum magnitude and the subshell or orbital shape.</p><p>The magnetic quantum number <math><mi>𝑚</mi></math> (or <math><msub><mi>𝑚</mi><mi>ℓ</mi></msub></math>) takes values from <math><mi>𝑚</mi><mo>=</mo><mo form="prefix">−</mo><mi>ℓ</mi><mo>,</mo><mo form="prefix">−</mo><mi>ℓ</mi><mo>+</mo><mn>1</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>ℓ</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>ℓ</mi></math>. It determines <math><msub><mi>𝐿</mi><mi>𝑧</mi></msub><mo>=</mo><mi>𝑚</mi><mi>ℏ</mi></math> and labels a particular orbital within a subshell.</p><p>The wave function is then given by</p><div class="display-math"><math display="block"><msub><mi mathvariant="normal">Ψ</mi><mrow><mi>𝑛</mi><mi>ℓ</mi><mi>𝑚</mi></mrow></msub><mrow><mo>(</mo><mrow><mi>𝑟</mi><mo>,</mo><mi>𝜃</mi><mo>,</mo><mi>𝜑</mi></mrow><mo>)</mo></mrow><mi>.</mi></math></div><p>An orbital is given the three defining quantum number mentioned above, denote it with a number concatenated by <math><mover accent="true"><mrow><mi>𝑛</mi><mi>ℓ</mi><msub><mi>𝑚</mi><mi>ℓ</mi></msub></mrow><mo form="prefix" lspace="0.16666666666666666em" rspace="0em">‾</mo></mover></math>.</p><nav class="page-nav" aria-label="Previous and next pages"><a class="page-nav-card nav-prev" href="../../Atoms/schrondinger/"><span class="page-nav-arrow">←</span><span class="page-nav-kicker">Previous</span><span class="page-nav-title">§1.2 The Schrödinger Equation</span></a><a class="page-nav-card nav-next" href="../../bibliography/"><span class="page-nav-kicker">Next</span><span class="page-nav-title">Bibliography</span><span class="page-nav-arrow">→</span></a></nav></main><aside class="sidebar-right"><nav class="local-toc" aria-label="On this page"><h2>On This Page</h2><ul><li class="toc-heading" style="--toc-depth: 0"><a href="#loc-1">§1.3 Atomic Orbitals</a></li></ul></nav></aside></div><div class="sidebar-backdrop" id="sidebar-backdrop"></div><script src="../../assets/site.js"></script><script src="../../assets/search.js"></script></body></html>

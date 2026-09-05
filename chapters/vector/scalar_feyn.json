@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "nodes": [],
+  "edges": [
+    {
+      "id": "edge_1785264798967",
+      "x1": 175,
+      "y1": 175,
+      "x2": 275,
+      "y2": 175,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    }
+  ],
+  "labels": [],
+  "shapes": []
+}

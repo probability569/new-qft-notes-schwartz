@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": "node_1785516388709",
+      "x": 225,
+      "y": 150,
+      "radius": 8,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "fillColor": "#ffffff",
+      "fillType": "solid",
+      "nodeStyle": "diamond",
+      "patAngle": 45,
+      "patColor": "#000000",
+      "patWidth": 2,
+      "patSpacing": 4
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_1785516377359",
+      "x1": 225,
+      "y1": 150,
+      "x2": 275,
+      "y2": 100,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "label_1785516405500",
+      "text": "$p_i$",
+      "x": 238.5057373046875,
+      "y": 111.49425506591797
+    }
+  ],
+  "shapes": []
+}

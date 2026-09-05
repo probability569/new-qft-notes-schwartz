@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": "node_1785516170028",
+      "x": 200,
+      "y": 150,
+      "radius": 8,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "fillColor": "#ffffff",
+      "fillType": "solid",
+      "nodeStyle": "diamond",
+      "patAngle": 45,
+      "patColor": "#000000",
+      "patWidth": 2,
+      "patSpacing": 4
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_1785516120355",
+      "x1": 150,
+      "y1": 200,
+      "x2": 200,
+      "y2": 150,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785516204044",
+      "x1": 100,
+      "y1": 200,
+      "x2": 150,
+      "y2": 200,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "dashed",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": true,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    },
+    {
+      "id": "edge_1785516214741",
+      "x1": 150,
+      "y1": 200,
+      "x2": 200,
+      "y2": 250,
+      "curvature": 0,
+      "color": "#000000",
+      "strokeWidth": 1,
+      "lineType": "wavy",
+      "multiplicity": 1,
+      "dashLength": 3,
+      "arrowMid": false,
+      "arrowEnd": false,
+      "arrowStart": false,
+      "arrowSize": 10,
+      "arrowFlip": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "label_1785516228814",
+      "text": "$p_i$",
+      "x": 119.82758331298828,
+      "y": 186.4942626953125
+    },
+    {
+      "id": "label_1785516238373",
+      "text": "$p_i-q$",
+      "x": 201.72413635253906,
+      "y": 180.74713134765625
+    },
+    {
+      "id": "label_1785516241693",
+      "text": "$q$",
+      "x": 195.4022979736328,
+      "y": 219.8275909423828
+    }
+  ],
+  "shapes": []
+}
