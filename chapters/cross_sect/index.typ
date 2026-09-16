@@ -24,9 +24,10 @@ $ ((dif sigma)/(dif Omega) )_"CM" = 1/(64 pi^2 E_("CM")^2) abs(cal(M))^2 $ and t
   - Differential scattering number $ dif N = L times dif sigma $
     - $L$ is defined as the _Luminosity_ through this equation
 
-#note("Differential solid angle")[
+/*#note("Differential solid angle")[
   The cross section $dif sigma$ is generally measured via $(dif sigma)/(dif Omega)$ as seen earlier. This $dif Omega$ is equivalent to $ dif Omega = sin theta dif theta dif pphi = - dif cos theta dif pphi $
 ]
+*/
 
 === Cross Section to Matrix Element
 
@@ -101,6 +102,8 @@ $ ((dif sigma)/(dif Omega) )_"CM" = 1/(64 pi^2 E_("CM")^2) abs(cal(M))^2 $ and t
   - $ tilde(V)(arrow(K)) = integral dif^3 x e^(- i arrow(k) dot arrow(x)) V(arrow(x)) $
 
 
-#note("Dimension of Matrix Elements")[
+/*#note("Dimension of Matrix Elements")[
+
 - Utilizing the formula $ (dif sigma)/(dif Omega) = 1/(64 pi^2 E_("CM")^2) abs(scr(M))^2 $, we can fairly clearly see that since $[(dif sigma)/(dif Omega)] = -2 $ and that $[E_("CM")^2] = -2$, $scr(M)$ must be dimensionless which should logically make sense.
 ]
+*/

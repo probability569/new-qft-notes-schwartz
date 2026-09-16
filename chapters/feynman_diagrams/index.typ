@@ -1,6 +1,10 @@
-#import "../macros.typ":*
+#import "/src/components/index.typ": docs-chapter
+#import "/lib.typ": *
 
-== Feynman Diagrams and the Path Integral (TODO)
+#show: docs-chapter.with(
+  title: "Feynman Diagrams",
+  route: "feynman_diag",
+)
 
 === Feynman Propagators
 

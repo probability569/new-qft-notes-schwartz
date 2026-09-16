@@ -1,4 +1,4 @@
-#import "/src/components/index.typ": docs-frontmatter
+#import "/src/components/index.typ": docs-chapter
 #import "/lib.typ": *
 
 #show: docs-chapter.with(

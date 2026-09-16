@@ -1,7 +1,11 @@
-#import "../macros.typ":*
+#import "/src/components/index.typ": docs-chapter
+#import "/lib.typ": *
 
+#show: docs-chapter.with(
+  title: "Math",
+  route: "math",
+)
 
-= Math
 
 
 
@@ -50,12 +54,12 @@ All of these expressions regarding spinors will be explained or will quickly bec
   A Group $G$ is a set of elements ${g_i} in G$ and a rule $g_i times g_j = g_k$ giving how they "multiply."
 ]
 
-#rules("Group Theory Axioms")[
+=== Group Theory Axioms
 - For each element $g_i in G$ and $g_j in G$, their product $g_i times g_j = g_k in G$ is an element of $G$
 - Products must be Associative: $ (g_i times g_j) times g_k = g_i times (g_j times g_k) $
 - There must be an Identity: $ bb(1) times g_i = g_i times bb(1) = g_i $
 - Elements have an Inverse: $ g^(-1)_i times g_i  = bb(1) $
-]
+
 #definition("Representation")[
   An embedding of $g_i$ as operators in a vector space
 ]

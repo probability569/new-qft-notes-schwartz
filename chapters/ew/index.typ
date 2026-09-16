@@ -1,6 +1,11 @@
-#import "../macros.typ":*
+#import "/src/components/index.typ": docs-frontmatter
+#import "/lib.typ": *
 
-= Electroweak & SSB
+#show: docs-chapter.with(
+  title: "Electroweak and SSB",
+  route: "ew",
+)
+
 #rules("Importance")[
 - This is the 3rd and final force (outside of string theory) that is important in QFT. 
 - Important ideas from this section include _spontaneous symmetry breaking_ and the higgs boson

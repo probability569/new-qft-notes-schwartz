@@ -1,11 +1,18 @@
-#import "../macros.typ":*
-== Useful Math formalism (Appendix): Helicity Spinors (TODO)
+#import "/src/components/index.typ": docs-subchapter
+#import "/lib.typ": *
 
-#rules("Summary")[
+#let chevron = sym.chevron
+
+#show: docs-subchapter.with(
+  title: "Helicity Spinors",
+  route: "helicity",
+)
+
+Summary:
   - Helicity spinors are a way to write polarizations $epsilon_mu$ and momentum $p_mu$ in terms of a more natural way (bispinors)
     - This is more convenient specifically for calculating gluon scattering
   - They are written in the weyl representation where $psi_alpha$ and $tilde(chi)^(dot(alpha))$ are left and right handed spinors
-]
+
 
 - Notice that spin 1 fields transform in the $(1/2,1/2)$ representation of the Lorentz group
   - This entails that we can write them as bispinors instead of 4-vectors
@@ -55,12 +62,12 @@ p^\mu = \frac{1}{2} \bar{\sigma}^{\mu\alpha\dot{\alpha}} p_{\alpha\dot{\alpha}},
 p^{\alpha\dot{\alpha}} = \lambda^\alpha \tilde{\chi}^{\dot{\alpha}}
 ```)
 
-#derivation("Explicit Lambda Values")[
+
 #qft(```latex
 \lambda_\alpha = \frac{z}{\sqrt{p^0-p^3}} \begin{pmatrix} p^0-p^3 \\ -p^1-ip^2 \end{pmatrix}, \\
 \tilde{\lambda}^\dot{\alpha} = \frac{z^1}{\sqrt{p^0-p^3}} (p^0-p^3, -p^1+ip^2)
 ```)
-]
+
 
 ==== Little Group
 

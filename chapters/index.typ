@@ -14,9 +14,19 @@
 
 #set heading(numbering: "1.1")
 #counter(heading).update(0)
-#include "prereq/index.typ"
+#include "math/index.typ"
+#include "scalar/index.typ"
 #include "classical/index.typ"
+#include "classical/lagrangians/index.typ"
+#include "classical/noether/index.typ"
+#include "cross_sect/index.typ"
+
+#include "qed/Lorentz/index.typ"
+#include "qed/index.typ"
+#include "qcd/index.typ"
 #include "qcd/qcd_rules/index.typ"
+#include "qcd/helicity/index.typ"
+
 
 #set heading(numbering: "A.1")
 #counter(heading).update(0)

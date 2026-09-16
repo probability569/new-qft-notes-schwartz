@@ -1,7 +1,19 @@
+#import "/src/components/index.typ": docs-subchapter
+#import "/lib.typ": *
+
+#let chevron = sym.chevron
+
+#show: docs-subchapter.with(
+  title: "Spinors",
+  route: "spinors",
+)
+
+
+
 = Spinors
 
 == Lorentz and Spinors
-#import "../../macros.typ":*
+
 Some Supplementary material for this section is Spinors for Beginners by Eigenchris which is very useful to get a grasp of the actual math that is going on.
 
 === Lorentz Transformations
@@ -129,9 +141,9 @@ K_1 = i mat(
 
 
 
-#rules("Pauli Matrix and Gamma Matrix Indentities")[
+=== Pauli Matrix and Gamma Matrix Indentities
  $ sigma^i sigma^j = delta^(i j) i epsilon^(i j k) sigma^k, {sigma^i, sigma^j} = 2 delta^(i j), [sigma^i, sigma^j] = 2 i epsilon^(i j k) sigma^k $ For Pauli Matrices 
-]
+
 
 - A useful quantity to define is a representation of the Lorentz Algebra $ S^(rho sigma) = 1/2 [gamma^rho,gamma^sigma] = 1/2 gamma^rho gamma^sigma - 1/2 g^(rho sigma) $
 
@@ -181,9 +193,9 @@ J_i^+ \equiv \frac{1}{2}(J_i + iK_i), \quad J_i^- \equiv \frac{1}{2}(J_i - iK_i)
 \left( \frac{1}{2}, 0 \right) : \vec{J} = \frac{1}{2} \vec{\sigma}, \quad \vec{K} = \frac{i}{2} \vec{\sigma} \\
 \left( 0, \frac{1}{2} \right) : \vec{J} = \frac{1}{2} \vec{\sigma}, \quad \vec{K} = -\frac{i}{2} \vec{\sigma}
 ```)
-#note("Hermicity")[
+=== Note: Hermicity
   - Rotations are hermitian and boosts are anti hermitian
-]
+
 
 - Now we have an even better way to define spinors in terms of their handedness
 
@@ -211,7 +223,8 @@ J_i^+ \equiv \frac{1}{2}(J_i + iK_i), \quad J_i^- \equiv \frac{1}{2}(J_i - iK_i)
 \delta \psi_R^\dagger = \frac{1}{2} (-i \theta_j + \beta_j) \psi_R^\dagger \sigma_j \\
 \delta \psi_L^\dagger = \frac{1}{2} (-i \theta_j - \beta_j) \psi_L^\dagger \sigma_j
 ```)
-#note("Unitarity")[Since there is no finite dimensional unitary representation of the lorentz group, spinor bases must be built in terms of momentum, much like the photon field]
+=== note: Unitarity 
+Since there is no finite dimensional unitary representation of the lorentz group, spinor bases must be built in terms of momentum, much like the photon field
 === Lorentz Invariant Lagrangian
 
 - How do we get a Lorentz invariant lagrangian with our new spinor valued fields?
@@ -245,7 +258,7 @@ J_i^+ \equiv \frac{1}{2}(J_i + iK_i), \quad J_i^- \equiv \frac{1}{2}(J_i - iK_i)
 
   - we can try adding terms like $lag_"kin" = psi_L^dagger square psi_R + psi_R^dagger square psi_L$ but these are "not interesting" @schwartz2014quantum
 
-  - Let's look at a term like $psi^dagger_R sigma_i psi_R$: #derivation("calculations for our new term")[#qft(```latex
+  - Let's look at a term like $psi^dagger_R sigma_i psi_R$: [#qft(```latex
 \delta(\psi_R^\dagger \sigma_i \psi_R) = \frac{1}{2} \psi_R^\dagger \sigma_i [(i\theta_j + \beta_j) \sigma_j \psi_R] + \frac{1}{2} [\psi_R^\dagger (-i\theta_j + \beta_j) \sigma_j] \sigma_i \psi_R \\
 = \frac{\beta_j}{2} \psi_R^\dagger (\sigma_i \sigma_j + \sigma_j \sigma_i) \psi_R + \frac{i\theta_j}{2} (\sigma_i \sigma_j - \sigma_j \sigma_i) \psi_R \\
 = \beta_i \psi_R^\dagger \psi_R - \theta_j \epsilon_{ijk} \psi_R^\dagger \sigma_k \psi_R \\

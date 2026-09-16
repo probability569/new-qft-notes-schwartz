@@ -1,7 +1,10 @@
-#import "../macros.typ":*
+#import "/src/components/index.typ": docs-frontmatter
+#import "/lib.typ": *
 
-= QCD
-
+#show: docs-chapter.with(
+  title: "Quantum Chromodynamics",
+  route: "qcd",
+)
 
 == Non Abelian Gauge Theories
 
@@ -150,10 +153,10 @@ T^{a}_{\text{anti-fund}} = -\left(T^{a}_{\text{fund}}\right)^{*}
 \phi_i^* \to \phi_i^* + i \alpha^a (T_{\text{anti-fund}}^a)_{ij} \phi_j^* = \phi_i^* - i \alpha^a \phi_j^* (T_{\text{fund}}^a)_{ji}
 ```)
 
-#note("Indices")[
+/*#note("Indices")[
 - Mid latin alphabet $i,j$ are used to index color
 ]
-
+*/
 - In order to determine the generators for a theory, we expand around $bb(1)$
   - In $"SU"(2)$, the generators are $sigma^mu$
   $  T^a = tau^a equiv sigma^a /2 $
@@ -497,22 +500,24 @@ D_\mu j^a_\mu = 0
 === The Gluon Propagator
 
 ==== F-P ghosts
-#rules("Summary")[
+/*#rules("Summary")[
   - There is a lot of math and a lot of unseen math in this section so it may be impossible to read
   - The summary for this section is tha the Lagrangian for QCD involves ghosts which are unphysical and not gauge invariant 
   - The QCD lagrangian that we derive is 
 ]
+*/
 
 - To Start, let us consider the equations of motion for a photon with an external current#qft(```latex
 (g_{\mu\nu} \Box - \partial_\mu \partial_\nu) A_m = J_\nu
 ```)
   - This is not invertible, similar to the gluon equation of motion
-#trick[
+/*#trick[
   We can introduce (and have introduced) a term into the lagrangian of the form #qft(```latex
 \frac{1}{2 \xi} (\partial_\mu A_\mu)^2
 ```)
 ]
-- This gives us, in the path integral approach of QFT, #qft(```latex
+- This gives us, in the path integral approach of QFT, 
+*/#qft(```latex
 f(\xi) = \int \mathcal{D}\pi \, e^{-i \int d^4x \, \frac{1}{2\xi} (D\pi)^2} = \int \mathcal{D}\pi \, e^{-i \int d^4x \, \frac{1}{2\xi} (D\pi - \partial_\mu A_\mu)^2}
 ```)
   - This is independed of $A_mu$ since we can take $pi -> pi - 1/square partial_mu A_mu$
@@ -562,14 +567,14 @@ f = \sqrt{\frac{1}{\det(\partial_\mu D_\mu)^2}} \times \text{const.}
 - Then, #qft(```latex
 Z[0] = \text{const} \times \int \mathcal{D}A_m \mathcal{D}\phi_i \left( \det(\mathcal{M}_{mn}) \right) \\ \times \exp \left\{ i \int d^4x \left[ \mathcal{L}(A, \phi_i) - \frac{1}{2\xi} (\partial_\mu A^a_m)^2 \right] \right\}
 ```)
-#derivation("Gaussians")[
+
 - We can use identities for gaussians to write #qft(```latex
 \det(\partial^\mu D_\mu) = \int \mathcal{D}\bar{c} \mathcal{D}c \exp\left(i \int d^4x \, \bar{c} (-\partial^\mu D_\mu) c\right)
 ```)
   - The identity involved in this is #qft(```latex
 \det(\mathcal{O}) = \int \mathcal{D}\bar{\psi} \mathcal{D}\psi \exp\left(-i \int \bar{\psi} \mathcal{O} \psi\right)
 ```)
-]
+
 
 - Hence, we obtain the result that #qft(```latex
 Z[c] = \text{const.} \times \int \mathcal{D}A_\mu \mathcal{D}\phi \mathcal{D}\bar{c} \mathcal{D}c \\ \times \exp \left\{ i \int d^4x \left[ L(A, \phi) - \frac{1}{2\xi} (\partial_\mu A^\mu)^2 - \bar{c}^a \partial^\mu D_\mu c^a \right] \right\}
@@ -577,11 +582,11 @@ Z[c] = \text{const.} \times \int \mathcal{D}A_\mu \mathcal{D}\phi \mathcal{D}\ba
 
 - We have obtained a very bad result:
 
-#result[
+
   - In QCD, as a result of trying to find a gluon propagator, we find these annoying things called Fadeev-Popov ghosts and antighosts
   - They pop up out of nowhere and are not gauge invariant
     - They are aphysical clearly
-]
+
 
 - The Lagrangian must (and I mean must unless you are willing to work in a obnoxious gauge) be written with these in mind
 
@@ -597,7 +602,7 @@ i \frac{-g^{\mu\nu} + (1-\xi)\frac{p^\mu p^\nu}{p^2}}{p^2 + i\varepsilon} \delta
 ```) $
 
 
-#derivation("Generic gauge")[
+
   - Observe that $ #qft(```latex
 1 = \int \mathcal{D}\pi \, \delta(G(A_\mu^a - D_\mu \pi^a)) \, \det \left( \frac{\delta G[A_\mu^a - D_\mu \pi^a]}{\delta \pi^a} \right)
 ```)  $
@@ -628,7 +633,7 @@ A_{\mu}^{a} \rightarrow A_{\mu}^{a} + D_{\mu} \pi^{a}
 #qft(```latex
 Z[0] = \text{const} \times \int \mathcal{D}A_\mu \mathcal{D}\phi_i \det\left(\frac{\delta G[A_\mu, \phi_i]}{\delta \phi_j}\right) \times \exp\left[i \int d^4x \left( L[A, \phi_i] - \frac{1}{2g} G[A_\mu]^2 \right)\right]
 ```)
-]
+
 
 ==== BRST Invariance
 
@@ -679,15 +684,15 @@ D_{\mu} c^a \to D_{\mu} c^a + g f^{abc} (D_{\mu} c^b) c^c - g f^{abc} \left[ \fr
 
 ==== Axial gauges
 
-#rules[*Summary*][- Axial gauges are not very useful to work with but they remove the ghosts that are inconvenient to work with
+*Summary*
+- Axial gauges are not very useful to work with but they remove the ghosts that are inconvenient to work with
 
 - The gluon propagator in an axial gauge is #qft(```latex
 i\Pi_{\text{lightcone}}^{\mu\nu ab} = \frac{i}{p^2 + i\epsilon} \left[ -ig^{\mu\nu} + \frac{r^\mu p^\nu + p^\mu r^\nu}{rp} \right] \delta^{ab}
 ```) which, as you may be able to see, is not the most fun to work with
 
-]
 
-#derivation("Axial Gauges")[
+
 
 - The most general lagrangian that we can write to gauge fix our other one is #qft(```latex
 -\frac{1}{2\lambda}(\partial^\mu A_\mu^a)^2 + \bar{c}^a \partial^\mu (\delta^{ab} \partial_\mu + g f^{abc} A_\mu^b) c^c
@@ -697,13 +702,13 @@ i\Pi_{\text{lightcone}}^{\mu\nu ab} = \frac{i}{p^2 + i\epsilon} \left[ -ig^{\mu\
 ```)
   - We of course want this to satisfy the ward identity, but we do not have to change anything since it already does.
 - In the _Lightcone gauge_, we force that $r^2 = 0$, $lambda =0$, which yields our propagator
-]
+
 
 == Lattice QCD
-#rules("Summary")[
+*Summary*
 - Lattice QCD works by discretizing standard QCD into plaquettes and evaluating wilson loops on them
 - Fields are at specific lattice sites
-]
+
 
 #definition("Discrete Wilson line")[
   - First, lets consider some notation. $hat(mu)$ and $hat(nu)$ will be unit vectors (of length $a$ since in lattice qcd, everything is scaled by such a factor) in the $mu$ and $nu$ directions. $W_mu (n)$ will denote a wilson line at some site $n$ and some other site $n + hat(mu)$
@@ -712,11 +717,11 @@ i\Pi_{\text{lightcone}}^{\mu\nu ab} = \frac{i}{p^2 + i\epsilon} \left[ -ig^{\mu\
 W_{\mu}(n) \to U(n) W_{\mu}(n) U^{\dagger}(n + \hat{\mu})
 ```) because $pphi(n) -> U(n) pphi(n)$
 
-#derivation("Verification")[
+Verification:
 - Just testing that our wilson lines behave correctly (as they should), #qft(```latex
 \vec{\phi}^\dagger(n) W_\mu(n) \vec{\phi}(n+\hat{m}) \to \vec{\phi}^\dagger(n) U^\dagger(n) U(n) W_\mu(n) \\ \times U^\dagger(n+\hat{\mu}) U(n+\hat{\mu}) \vec{\phi}(n+\hat{\mu}) = \vec{\phi}^\dagger(n) W_\mu(n) \vec{\phi}(n+\hat{\mu})
 ```)
-]
+
 
 #definition("Backwards Wilson Line")[
 - $W_(-\mu) (n) = W^dagger_mu (n - hat(mu))$
@@ -735,7 +740,7 @@ W_{\mu\nu}(N) \equiv W_{-\nu}(n+\hat{\nu}) W_{-\mu}(n+\hat{\mu}+\hat{\nu}) W_{\n
 - If we write #qft(```latex
 W_\mu(n) = \exp(i a \underline{A}_\mu(n))
 ```), we can see how this would be related to the continuous version
-#derivation("Evaluating Plaquettes")[
+Evaluating Plaquettes:
 - How do we evaluate plaquettes?
 
   - Consider the _Campbell Baker Hausdorff_ formula: #qft(```latex
@@ -753,7 +758,7 @@ W_\mu(n) = \exp(i a \underline{A}_\mu(n))
 ```), #qft(```latex
 W_{\mu\nu}(n) = \exp \left\{ i a^2 (\partial_\mu \underline{A}_\nu(n) - \partial_\nu \underline{A}_\mu(n)) + a^2 [\underline{A}_\mu(n), \underline{A}_\nu(n)] + O(a^3) \right\} \\ = \exp \{ i a^2 \underline{F}_{\mu\nu}(n) + O(a^3) \}
 ```)
-]
+
 
 - Consider the Yang Mills action: #qft(```latex
 S_{YM}[F_{\mu\nu}] = i \int d^4x \left( -\frac{1}{4g^2} (F_{\mu\nu}^a)^2 \right)
@@ -770,6 +775,6 @@ S_{YM}[F_{\mu\nu}] = i \int d^4x \left( -\frac{1}{4g^2} (F_{\mu\nu}^a)^2 \right)
 - We finally obtain the lattice action: #qft(```latex
 S_{\text{lattice}}[W_{\mu\nu}] = \frac{-i}{2g^2 N} \sum_{\nu, \mu} \text{Re}(\text{tr}(\mathbb{I} - W_{\mu\nu}(N)))
 ```)
-- For corr. functions, you would use this #blue("action") in a path integral like $ C(x) mel(Omega,cal(O)(0) cal(O)(x), Omega) = integral cal(D) A_mu cal(D) overline(u) cal(D) u space e^(blue(i S)) cal(O)(0) cal(O)(x) $ However, it would give a rapid phase shift. Instead, you must perform a #red("wick rotation")
-#include("qcd_rules/index.typ")
-#include("helicity.typ")
+- For corr. functions, you would use this action in a path integral like $ C(x) mel(Omega,cal(O)(0) cal(O)(x), Omega) = integral cal(D) A_mu cal(D) overline(u) cal(D) u space e^(i S) cal(O)(0) cal(O)(x) $ However, it would give a rapid phase shift. Instead, you must perform a _wick rotation_
+#include "qcd_rules/index.typ"
+#include "helicity/index.typ"
