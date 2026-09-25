@@ -3,12 +3,12 @@
 #let book = "Schwartz QFT"
 #let authors = ("Probability Floor",)
 #let date = "August 2026"
-#let source-url = "https://github.com/probability569/qft-notes-schwartz"
+#let source-url = "https://github.com/probability569/new-qft-notes-schwartz"
 // Public site root, used by 404.html even for deeply nested missing URLs.
-#let site-url = "https://probability569.github.io/qft-notes-schwartz"
+#let site-url = "https://probability569.github.io/new-qft-notes-schwartz"
 #let abstract(render-mode) = [
-  #let _quote = quote[note to self, do this or im the biggest retard]
-  #let _credit = [feyman likely]
+  #let _quote = quote[If you think you understand quantum mechanics, you don't understand quantum mechanics.]
+  #let _credit = [Richard Feynman]
   #if render-mode == "pdf" {
     align(center)[#_quote]
     align(right)[#_credit]
