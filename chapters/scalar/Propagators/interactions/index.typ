@@ -1,4 +1,13 @@
-#import "../../macros.typ":*
+#import "/src/components/index.typ": docs-subsubchapter
+#import "/lib.typ": *
+
+#let chevron = sym.chevron
+
+#show: docs-subsubchapter.with(
+  title: "Interactions",
+  route: "interactions",
+)
+
 
 == More Information on the S-matrix
 
@@ -44,9 +53,9 @@
   - Putting this into the integral, $ i integral dif^4 x e^(i p x) (square +m^2) pphi(x) = integral dif^4 x partial_t [e^(i p x) (i partial_t + omega_p) pphi(x)] \ = integral dif t partial_t [e^(i omega_p t) integral dif^3 x e^(- i bold(p) dot bold(x)) (i partial_t + omega_p) pphi(x)] $
     - This is true for all $pphi(x)$ 
   - Quantum Field Case: $ integral dif^3 x e^(-i bold(p) dot bold(x)) (i partial_t + omega_p) pphi(x) \ = integral dif^3 x e^(- i bold(p) dot bold(x)) (i partial_t + omega_p) \ times integral diff(3,k) 1/(sqrt(2 omega_k)) (a_k (t) e^(- i k x) a^dagger_k (t) e^(i k x)) \ = integral diff(3,k) integral dif^3 x ( ((omega_k + omega_p)/(sqrt(2 omega_k))) a_k (t) e^(- i k x) e^(- i bold(p) dot bold(x)) \ + ((-omega_k + omega_p)/(sqrt(2 omega_k))) a^dagger_k (t) e^(i k x) e^(- i bold(p) dot bold(x))     ) $
-#note("Math Note")[
+Note that
   - $partial_t a_k (t) = 0$ at $t=plus.minus oo$
-]
+
   - The $dif^3 x$ integral enforces $omega_k = omega_p$ via delta functions
   - Therefore, we get $ integral dif^3 x e^(-i bold(p) dot bold(x)) (i partial_t + omega_p) pphi(x) = sqrt(2 omega_p) a_p (t) e^(-i omega_p t) $
   - This implies $ i integral dif^4 x e^(i p x) (square + m^2) pphi(x) = integral dif t partial_t ( (e^(i omega_p t)) (sqrt(2 omega_p) a_p (t) e^(- i omega_p t))  ) \  = sqrt(2 omega_p) [a_p (oo) - a_p (-oo)] $ as desired

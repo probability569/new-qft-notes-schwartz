@@ -1,4 +1,14 @@
-#import "../../macros.typ":*
+#import "/src/components/index.typ": docs-subchapter
+#import "/lib.typ": *
+
+#let chevron = sym.chevron
+
+#show: docs-subchapter.with(
+  title: "Quantization and Fock",
+  route: "quant",
+)
+
+
 == Scalar Field Theory
 - Scalar Field Theory is fairly similar to Classical Field Theory with the exception that it is quantized via the methods that will be presented shortly. This ensures that it obeys the laws of quantum mechanics, while still being a "Toy Theory" due to the simplicity of the objects involved in it ((potentially) complex fields $pphi$ as opposed to _vectors_ $A_mu$ or _spinors_ $psi$ which are closer to real, physical particles).
 === Quantization
@@ -55,9 +65,9 @@ $
   - States in $cal(H)_n$ are linear combinations of ${ket(p_1^mu dots p_n^mu)}$
     - Since we are using _Fock Space_, this means that there can be however many particles due to the direct sum over Hilbert Spaces
 
-#note("Momentum Notation")[
+==== Momentum Notation
   $p^0 = sqrt(arrow(p)^2 + m^2 )$ so $ket(p) = ket(arrow(p)) = ket(p^mu)$ due to no loss of generality (this only works if it is on-shell).
-]
+
   
 ==== Field Expansion
 - Previously, we noted that $[a,a^dagger] = 1$. This generalizes to $[a_k , a^dagger_p] = (2 pi)^3 delta^3(arrow(p)-arrow(k))$
@@ -68,10 +78,10 @@ $
 - Identity operator $ bb(1)  = integral diff(3,p) 1/(2 omega_p) ketbra(p) $
 
 - Free field definition $ pphi_0 (arrow(x)) equiv integral diff(3,p) 1/sqrt(2 omega_p) (a_p e^(i arrow(p) dot arrow(x)) + a_p^dagger e^(- i arrow(p) dot arrow(x))) $ which is why I said $pphi(arrow(x),t)$ from 4.1.2 was written in a suggestive manner (although this is still technically just a definition)
-#note("Momentum state inner product with free field")[
+==== Momentum state inner product with free field
   $ mel(arrow(p),pphi_0(arrow(x)),0) = bra(0) sqrt(2 omega_p) a_p integral diff(3,k) (a_k e^(i arrow(k) arrow(x)) + a_k^dagger e^(- i arrow(k) dot arrow(x)) ) ket(0) \ = integral diff(3,k) sqrt(omega_p/omega_k) [e^(i arrow(k) dot arrow(x)) mel(0,a_p a_k , 0) + e^(- i arrow(k) dot arrow(x) ) mel(0,a_p a^dagger_k,0) = e^(- i arrow(p) dot arrow(x)) ] \ = e^(- i arrow(p) dot arrow(x)) $
   This is the expected result of $braket(arrow(p),arrow(x))$, and so we conclude $pphi_0(arrow(x)) ket(0) = ket(arrow(x))$
-]
+
 
 ==== Time Dependence
 - Because of Heisenberg's equations of motion, in the Heisenberg perspective, $a_p (t)$ and $a_p^dagger (t)$ are time dependent

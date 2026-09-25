@@ -6,10 +6,10 @@
   route: "ew",
 )
 
-#rules("Importance")[
+*Importance*
 - This is the 3rd and final force (outside of string theory) that is important in QFT. 
 - Important ideas from this section include _spontaneous symmetry breaking_ and the higgs boson
-]
+
 == Spontaneous Symmetry Breaking
 === Condmat/Discrete symmetries
 - Spontaneous has some analogies to condensed matter physics which are worth noting 

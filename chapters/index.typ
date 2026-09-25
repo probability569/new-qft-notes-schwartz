@@ -19,13 +19,21 @@
 #include "classical/index.typ"
 #include "classical/lagrangians/index.typ"
 #include "classical/noether/index.typ"
+#include "scalar/Propagators/index.typ"
+#include "scalar/Propagators/interactions/index.typ"
+#include "scalar/Quantization and Fock/index.typ"
 #include "cross_sect/index.typ"
-
+#include "feynman_diagrams/index.typ"
 #include "qed/Lorentz/index.typ"
 #include "qed/index.typ"
+#include "renorm/index.typ"
+// #include "renorm/qcd_renorm/index.typ"
+#include "renorm/wilsonian/index.typ"
+
 #include "qcd/index.typ"
 #include "qcd/qcd_rules/index.typ"
 #include "qcd/helicity/index.typ"
+#include "ew/index.typ"
 
 
 #set heading(numbering: "A.1")

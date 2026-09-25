@@ -1,4 +1,12 @@
-#import "../../macros.typ":*
+#import "/src/components/index.typ": docs-subchapter
+#import "/lib.typ": *
+
+#let chevron = sym.chevron
+
+#show: docs-subchapter.with(
+  title: "Propagators",
+  route: "propagators",
+)
 
 
 == Propagators (TODO)
@@ -16,15 +24,15 @@
 - An example of a propagator is the $2$-point Green's function $Pi = -1/square$ which is defined by $ square_x Pi(x,y) = -delta^4 (x-y) $ 
 - With $square_x = g^(mu nu ) (partial)/(partial x^mu) (partial)/(partial x^nu)$ This gives the solution (via the Fourier transform), that $ Pi(x,y) = integral (dif^4 k)/(2 pi)^4 e^(i k (x - y)) 1/k^2 $. 
 
-#note("Fourier Transform of Operators")[
+===Fourier Transform of Operators
   Under _Fourier Transforms_, certain operators are effectively interchangeable with some counterpart that often simplifies calculations. An example of this is how $Pi(x,y)$ is interchangeable with $1/k^2$.
-]
+
 
 #example("Delta Functions")[
   For an instance of this occurrence, we can utilize delta functions.
-#note[
+
   The Fourier transform of any delta function is $ tilde(delta)(arrow(k)) = 1 \ ==> delta(arrow(x)) = integral (dif^3 k)/(2 pi)^3 e^(i arrow(k) dot arrow(x)) $ 
-]
+
   
   - $ triangle^n delta^3(arrow(x))  = integral (dif^3 k)/(2 pi)^3 triangle^n e^(i arrow(k) dot arrow(x)) \ =integral (dif^3 k)/(2 pi)^3 (-arrow(k)^2)^n e^(i arrow(k) dot arrow(x)) $
 
@@ -50,9 +58,9 @@
   We let $h = h_0 + h_1$.
   $ square(h_0 + h_1) - lambda(h_0 + h_1)^2 - J = 0 $ implies $ square h_1 = lambda h_0^2 + cal(O)(lambda^2) \ h = 1/square J + lambda 1/square ((1/square J) (1/square J)) + cal(O)(lambda^2) $ which we now have in terms of our Green's Functions. 
 ]
-#note[
+
   In fact, something being defined as $1/square J$ is not that uncommon, as it also happens with the Electromagnetic field.
-]
+
 
 === OFPT
 
@@ -73,17 +81,17 @@
 - Recursion provides $ T = V + V Pi_("LS") V + V Pi_("LS") V Pi_("LS") V + dots.c  $
 If we want a transition amplitude for this, we want to calculate $ bra(f)T ket(i) = bra(f) V ket(i) + bra(f) V Pi_("LS") V ket(i) + dots.c $
 
-#note[
-  We can insert the eigenstates within this equation due to the fact that $ sum_j ketbra(pphi_j) = bb(1) $
-]
+
+-  We can insert the eigenstates within this equation due to the fact that $ sum_j ketbra(pphi_j) = bb(1) $
+
 
 This provides $ bra(pphi_f)T ket(pphi_i) = bra(pphi_f) V ket(pphi_i) + bra(pphi_f) V Pi_("LS") ket(pphi_j) bra(pphi_j) V ket(pphi_i) + dots.c $
 
 - In an alternative/more convenient notation, $ T_(f i) = V_(f i) + (sum_j)V_(f j) Pi_("LS")(j) V_(j i) + (sum_j)V_(f i ) Pi_("LS")(j) V_(j k) Pi_("LS")(k) V_(k i ) + dots.c $
   Where $T_(i j)=bra(pphi_i)T ket(pphi_j)$, $V_(i j)=bra(pphi_i)V ket(pphi_j)$, $Pi_("LS")(j) = 1/(E-E_j)$ with $E_f = E_i$ and the sums tend to be omitted
-#note("OFPT With particle interactions")[
-  We can with a certain particle state $ket(i)$ and end with a final certain particle state $ket(f)$ and use _OFPT_ to calculate what happens in-between such states. An example of this is the case of an electron scattering off an electron.
-]
+
+- We can with a certain particle state $ket(i)$ and end with a final certain particle state $ket(f)$ and use _OFPT_ to calculate what happens in-between such states. An example of this is the case of an electron scattering off an electron.
+
 
 #example("Electron Scattering")[
   This is an example from the textbook that I was reading which allows for the derivation of the _Advanced_ and _Retarded_ propagators.
@@ -94,11 +102,11 @@ This provides $ bra(pphi_f)T ket(pphi_i) = bra(pphi_f) V ket(pphi_i) + bra(pphi_
   - Due to the fact that Coulomb's law is replaced by photon exchange we need a photon field $pphi(x)$.
   - This provides $ V = 1/2 e integral d^3 x psi_e (x) pphi(x) psi_e (x) $ with the $1/2$ from spin and the $e$ as some coupling constant (which happens to be the electron charge).
 
- #note[
+
    - This interaction turns a $arrow(p)_1$ electron into a $arrow(p)_3 $ electron and a $arrow(p)_gamma$ photon.
    - Since both $ket(i)$ and $ket(f)$ have 2 electrons and no photons, $V_(i j) = 0$ //WTF
    
- ]
+ 
 ==== Retarded and Advanced Propagators
  
 - This gets split into two states. (propagated by the _Retarded_ Propagator and the _Advanced_ Propagator)
@@ -127,10 +135,10 @@ This provides $ bra(pphi_f)T ket(pphi_i) = bra(pphi_f) V ket(pphi_i) + bra(pphi_
 
 ==== Evaluating The Propagators
 - $ V^R_(n i )= mel(psi^3_e phi^gamma, V ,psi^1_e) = e/2 integral dif^3 x mel(psi^3_e phi^gamma, psi_e (x) pphi(x) psi_e (x), psi^1_e) $
-#note[
+
   - Free field (like the photon and electron fields inside of the integral)
   $ mel(pphi^gamma, pphi(x),0) =e^(- i arrow(p) dot arrow(x)) $
-]
+
 - This implies: $ V^R_(n i) = e integral dif^3 x e^(i (arrow(p)_1 - arrow(p)_2 - arrow(p)_3) dot arrow(x)) \ = e ddelta(3,arrow(p)_1 - arrow(p)_2 - arrow(p)_3) $
   - This is similar to other matrix elements
 
@@ -141,11 +149,11 @@ This provides $ bra(pphi_f)T ket(pphi_i) = bra(pphi_f) V ket(pphi_i) + bra(pphi_
 
 - We want to calculate the energy of the states
 
-#rules("Denotations")[
+==== Here are some denotations:
   - Momenta of particles are $ arrow(p)_1, arrow(p)_2, arrow(p)_3, arrow(p)_4, arrow(p)_gamma $
   - The energy of each respective particle is
   
-]
+
 
 
 

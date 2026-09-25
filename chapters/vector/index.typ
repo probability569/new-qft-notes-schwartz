@@ -1,4 +1,14 @@
-#import "../macros.typ":*
+#import "/src/components/index.typ": docs-chapter
+#import "/lib.typ": *
+
+#let chevron = sym.chevron
+
+#show: docs-chapter.with(
+  title: "Vector",
+  route: "vector",
+)
+
+
 = Vectors
 
 == Gauge Invariance
@@ -295,13 +305,12 @@ A_\mu(x) = \int \frac{d^4 p}{(2\pi)^4} \varepsilon_\mu(p) e^{i p x}
 ```)
 
 - $epsilon_mu ^f$ is known as forward polarization
-
-#note("Forward Polarization")[
+* Note: Forward Polarization *
   - Forward polarization is proportional to momentum
     - Hence, it corresponds to $A_mu = partial_mu pphi$
     - Therefore, $A_mu = 0$ due to gauge invariance
     - Therefore, forward polarization is not physical
-]
+
 
 === Covariant Derivatives
 
@@ -356,9 +365,9 @@ D_\mu \phi_n = (\partial_\mu - i e Q_n A_\mu) \phi_n
 J_{\mu} = \sum_{n} \frac{\partial \mathcal{L}}{\partial (\partial_{\mu} \phi_n)} \frac{\delta \phi_n}{\delta \alpha} = -i \underbrace{(\phi \overleftrightarrow{\partial_{\mu}} \phi^*)}_{\text{Free Theory current}} - 2e A_{\mu} \phi^* \phi
 ```)
 
-#note("Term in lagrangan")[
+* Note: Term in lagranganian *
   - The term in $lag$ that is linear in $A_mu$ is $-e A_mu J_mu$
-]
+
 - There is a reason behind this.
 - Define $lag_0$ as the limit of Gauge invariant lagrangians as $A_mu -> 0$ or $e ->0$
 - Then, $lag_0$ will still be invariant under the global symmetry such that $A_mu$ is the gauge field

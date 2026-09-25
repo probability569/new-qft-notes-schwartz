@@ -1,12 +1,11 @@
-#import "/src/components/index.typ": docs-chapter
+#import "/src/components/index.typ": docs-subchapter
 #import "/lib.typ": *
 
-#show: docs-chapter.with(
+#show: docs-subchapter.with(
   title: "QCD Feynman Rules",
   route: "qcd-feyn",
 )
 
-== QCD Feynman Rules
 
 - Now, we have the full lagrangian for QCD (the F-P) one allowing us to read off feynman rules
 

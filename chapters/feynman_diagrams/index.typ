@@ -1,10 +1,13 @@
 #import "/src/components/index.typ": docs-chapter
 #import "/lib.typ": *
 
+#let chevron = sym.chevron
+
 #show: docs-chapter.with(
   title: "Feynman Diagrams",
   route: "feynman_diag",
 )
+
 
 === Feynman Propagators
 
@@ -32,20 +35,21 @@
 ]
 - A standard set of Feynman rules that can generally apply everywhere are the following
 
-#rules("General Position Space Feynman Rules")[- At each vertex, a factor of the interaction coupling is given 
+General Position Space Feynman Rules
+- At each vertex, a factor of the interaction coupling is given 
 - All lines are integrated over $d^3 x$ after applying the Feynman propagator
 - The LSZ reduction formula is applied to convert this to an S-matrix element
 - Additional factors may be added if they are incoming/outgoing electrons/photons due to polarization and spin
-]
 
-#rules("General Momentum Space Feynman Rules (Arguably much more useful)")[- Each vertex of a Feynman Diagram gets a factor of whatever the interaction coupling is.
+
+* General Momentum Space Feynman Rules (Arguably much more useful *: 
+- Each vertex of a Feynman Diagram gets a factor of whatever the interaction coupling is.
 - Vertices can only occur at points that satisfy interactions in the Lagrangian #footnote[For instance, if $lag_("int") = g/3! pphi^3$, only interactions which involve fields intersecting at three points are included in the set of tree-level diagram]
-- For each edge whose momentum is known (that does not connect to an external vertex), a factor of the propagator for the theory $Pi$ is gained
-- For each edge whose momentum $k$ is unknown (i.e., a loop),  a factor of $Pi$ is gained and must be integrated over $ diff(4,k). $
+- For each edge whose momentum is known (that does not connect to an external vertex), a factor of the propagator for the theory $Pi$ is gained - For each edge whose momentum $k$ is unknown (i.e., a loop),  a factor of $Pi$ is gained and must be integrated over $ diff(4,k). $
 - The final product gives $ i cal(M)$ for the diagram
 - Additional factors may be added if they are incoming/outgoing electrons/photons due to polarization and spin
 
-]
+
 
 
 
@@ -85,10 +89,10 @@
 - Taking the second derivative, we obtain $ partial^2_t bra(Omega) T pphi(x) pphi(x') ket(Omega) = bra(Omega) T partial^2_t pphi(x) pphi(x') ket(Omega)\ + delta(t-t') bra(Omega) [partial_t pphi(x), pphi(x')] ket(Omega) $
   - Since the delta function forces time equivalence ($t=t'$) in the second term, we have that $ [partial_t pphi(x),pphi(x')] = - i planck delta^3 (bold(x) -bold(x)') $ and therefore additionally have that $ partial^2_t bra(Omega) T pphi(x) pphi(x') ket(Omega) = bra(Omega) T partial^2_t pphi(x) pphi(x') ket(Omega) - i planck delta^4 (x-x') $
 
-#note("Chevron Notation")[
+Chevron Notation
   - As you may have seen earlier, we have introduced notation $chevron.l pphi chevron.r$ in order to make notation more condensed. As you may be able to guess, $chevron.l pphi chevron.r equiv bra(Omega) pphi ket(Omega)$
 
-]
+
 - Therefore, the equation with $square +m^2$ follows and implies our Feynman propagator, $ (square_x +m^2) G_F (x,y) = -i planck delta^4 (x-y) $
 
 
@@ -124,9 +128,9 @@
 
 - Free fields: $ pphi_0 (bold(x), t) = e^(i H_0 (t-t_0)) pphi(bold(x)) e^(-i H_0 (t-t_0)) $
 
-#note[
+
   - This is equivalent to the plane wave solution for scalar fields. That is, $ pphi_0 (bold(x),t) = fquant(3,p,x) $
-]
+
 
 - In order to get the real field for this, we have that $ pphi(bold(x),t) = S^dagger (t,t_0) e^(- i H (t-t_0)) pphi_0 (bold(x),t ) e^(i H_0 (t-t_0)) S(t, t_0) \ equiv U^dagger (t,t_0) pphi_0 (bold("x"), t) U(t,t_0) $
 - This $U(t,t_0) equiv e^(i H_0 (t-t_0)) S(t,t_0)$ is unitary time evolution operator that we can utilize
@@ -175,8 +179,8 @@
 - Additionally, $braket(Omega) = 1$ which implies that, by normalization, $cal(N)_i cal(N)_f = bra(0) U_(oo,-oo) ket(0)^(-1)$
 
 
-
-#note("Oscillations")[ We have been taking $t->oo$ this whole time, which is incorrect. Utilizing $t-> oo$ without any damping will result in oscillations. That is, if we insert the energies $ e^(- i H t) ket(0) sum_n e^(i E_n t) ket(n) braket(n,0) $, taking $t->oo$ yields $e^(-i t E)$ for an energy $E$ which at large times causes unpredictable phase oscillations. Thus, we must use an analytic continuation by taking $t->oo-i epsilon$ (which would provide a dampening $e^(- epsilon E)$ )]
+*_Note_*: 
+We have been taking $t->oo$ this whole time, which is incorrect. Utilizing $t-> oo$ without any damping will result in oscillations. That is, if we insert the energies $ e^(- i H t) ket(0) sum_n e^(i E_n t) ket(n) braket(n,0) $, taking $t->oo$ yields $e^(-i t E)$ for an energy $E$ which at large times causes unpredictable phase oscillations. Thus, we must use an analytic continuation by taking $t->oo-i epsilon$ (which would provide a dampening $e^(- epsilon E)$ )
 
 - We can finally have the time ordered product $ bra(Omega) T pphi(x_1) dots pphi(x_n) ket(Omega) \ = lim_(T -> oo - i epsilon) (bra(0) T pphi_0 (x_1) dots pphi_0 (x_n) exp[-i integral_(-T)^T dif t H_I (t)] ket(0))/(bra(0) T exp[-i integral_(-T)^T dif t H_I (t)] ket(0)) $
 

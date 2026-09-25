@@ -1,4 +1,14 @@
-#import "../macros.typ":*
+#import "/src/components/index.typ": docs-subchapter
+#import "/lib.typ": *
+
+#let chevron = sym.chevron
+
+#show: docs-subchapter.with(
+  title: "QCD Renorm",
+  route: "running_coupling",
+)
+
+
 
 == Running Coupling of QCD
 - *This in no way is the order that you should learn QFT but it is a convenient way to keep notes*

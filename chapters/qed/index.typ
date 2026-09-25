@@ -10,7 +10,7 @@
 
 
 
-= QED (TODO)
+
 #definition("Quantum Electrodynamics")[
   Quantum Electrodynamics is a relatively simple theory with only one force involved (as suggested by the name, it is the electromagnetic force), mediated by the _photon_  $A_mu$ and one/two type(s) of fermion depending on what you consider a type of particle  (an _electron_/_positron_) 
 ]
@@ -44,7 +44,8 @@
 
 - These $u_s (p)$ and $v_s (p)$ are _basis spinors_ which satisfy the momentum space dirac equation. That is, $ mat(-m, p dot sigma; p dot macron(sigma), -m) u_s (p) = mat(-m, -p dot sigma; -p dot macron(sigma),  -m;) v_s (p) = 0 $ 
 - Again, these $u_s (p)$ and $v_s (p)$ are 4-index Dirac spinors.
-=== Basis Dirac Spinors" In general, the solution to this equation is $ u_s (p) = mat(sqrt(p dot sigma) xi; sqrt(p dot macron(sigma)) xi), v_s (p) = mat(sqrt(p dot sigma) eta_s ; -sqrt(p dot macron(sigma)) eta_s) $ 
+=== Basis Dirac Spinors
+ In general, the solution to this equation is $ u_s (p) = mat(sqrt(p dot sigma) xi; sqrt(p dot macron(sigma)) xi), v_s (p) = mat(sqrt(p dot sigma) eta_s ; -sqrt(p dot macron(sigma)) eta_s) $ 
   - $ sum_s u_s (p) macron(u)_s (p) = feynman(p) + m $
 
   - $ sum_s v_s (p) macron(v)_s (p) = feynman(p) - m $

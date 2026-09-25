@@ -1,16 +1,14 @@
-#import "/src/components/index.typ": docs-subchapter
+#import "/src/components/index.typ": docs-chapter
 #import "/lib.typ": *
 
 #let chevron = sym.chevron
 
-#show: docs-subchapter.with(
+#show: docs-chapter.with(
   title: "Spinors",
   route: "spinors",
 )
 
 
-
-= Spinors
 
 == Lorentz and Spinors
 
@@ -256,7 +254,7 @@ Since there is no finite dimensional unitary representation of the lorentz group
 
 - Now we want kinetic terms to add to the lagrangian
 
-  - we can try adding terms like $lag_"kin" = psi_L^dagger square psi_R + psi_R^dagger square psi_L$ but these are "not interesting" @schwartz2014quantum
+  - we can try adding terms like $lag_"kin" = psi_L^dagger square psi_R + psi_R^dagger square psi_L$ but these are "not interesting" 
 
   - Let's look at a term like $psi^dagger_R sigma_i psi_R$: [#qft(```latex
 \delta(\psi_R^\dagger \sigma_i \psi_R) = \frac{1}{2} \psi_R^\dagger \sigma_i [(i\theta_j + \beta_j) \sigma_j \psi_R] + \frac{1}{2} [\psi_R^\dagger (-i\theta_j + \beta_j) \sigma_j] \sigma_i \psi_R \\
