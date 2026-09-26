@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>§7.3 Gamma Matrix Identities | Notes on QFT</title><meta name="authors" content="Probability Floor"><style>/* Alignment */
+mtable.right-align mtd,
+mtable mtd.right-align,
+mtable.left-align mtd.right-align,
+mtable.aligned mtd:nth-child(odd) {
+  justify-items: end;
+  text-align: right;
+}
+mtable.cases mtd,
+mtable.left-align mtd,
+mtable mtd.left-align,
+mtable.aligned mtd:nth-child(even),
+math:is(:not([display])) > mtable.multiline-equation mtd {
+  justify-items: start;
+  text-align: left;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.left-flush {
+  padding-left: 0;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.right-flush {
+  padding-right: 0;
+}
+
+/* Tables */
+mtable {
+  math-style: inherit;
+}
+mtd {
+  math-depth: auto-add;
+  math-style: compact;
+  math-shift: compact;
+}
+
+/* Equations */
+mtable.multiline-equation mtd {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+  padding: 0;
+}
+math > mtable.multiline-equation mtr:not(:last-child) mtd {
+  padding-bottom: 0.5em;
+}
+
+/* Fractions */
+mfrac {
+  padding-inline: 0;
+  margin-inline: 0.1em;
+}
+
+/* Accents */
+mover[accent="true" i] > :first-child {
+  font-feature-settings: "dtls";
+}
+mover.dotted[accent="true" i] > :first-child {
+  font-feature-settings: "dtls" 0;
+}
+
+/* Other rules for scriptlevel, displaystyle and math-shift */
+munder > :nth-child(2),
+munderover > :nth-child(2) {
+  math-shift: compact
+}
+munder[accentunder="true" i] > :not(:first-child),
+mover[accent="true" i] > :not(:first-child) {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+}</style></head><body><link rel="stylesheet" href="../../assets/site.css"><link rel="stylesheet" href="../../assets/search.css"><header class="topbar"><div class="topbar-left"><button class="icon-button sidebar-toggle" id="sidebar-toggle-left" aria-label="Menu"><img class="icon" src="../../assets/menu.svg" alt="Menu"></button><a class="topbar-title" href="../../index.html">Notes on QFT</a></div><form class="topbar-search" data-search-form="true" role="search" action="../../search/" method="get"><input class="search-input" type="search" name="q" placeholder="Search..." autocomplete="off" aria-label="Search the site"><button class="search-submit icon-button" type="submit" aria-label="Search"><img class="icon" src="../../assets/search.svg" alt="Search"></button></form><div class="topbar-right"><button class="icon-button theme-toggle" aria-label="Toggle theme"><img class="icon" src="../../assets/theme.svg" alt="Theme"></button><button class="icon-button print-button" type="button" aria-label="Print page" title="Print"><img class="icon" src="../../assets/print.svg" alt="Print"></button><a class="icon-button export-pdf-link" href="../../pdf/notes.pdf" aria-label="Export PDF" title="Export PDF"><img class="icon" src="../../assets/download.svg" alt="Export PDF"></a><a class="icon-button github-link" href="https://github.com/probability569/new-qft-notes-schwartz" aria-label="GitHub source"><img class="icon" src="../../assets/github.svg" alt="GitHub"></a><button class="icon-button sidebar-toggle" id="sidebar-toggle-right" aria-label="Page contents"><img class="icon" src="../../assets/toc.svg" alt="Contents"></button></div></header><div class="layout"><aside class="sidebar-left"><nav class="global-nav" aria-label="Site navigation"><ul><li class="nav-item" style="--depth: 0"><a href="../../index.html">Cover</a></li><li class="nav-item" style="--depth: 0"><a href="../../preface/">Preface</a></li><li class="nav-item" style="--depth: 0"><a href="../../math/">Chapter 1: Math</a></li><li class="nav-item" style="--depth: 0"><a href="../../scalar/">Chapter 2: Scalar Field Theory</a></li><li class="nav-item" style="--depth: 0"><a href="../../cft/">Chapter 3: Classical Field Theory</a></li><li class="nav-item" style="--depth: 1"><a href="../../cft/lagrangians/">§3.2 Lagrangians</a></li><li class="nav-item" style="--depth: 1"><a href="../../cft/noether/">§3.3 Classical Symmetries</a></li><li class="nav-item" style="--depth: 1"><a href="../../cft/propagators/">§3.4 Propagators</a></li><li class="nav-item" style="--depth: 2"><a href="../../cft/propagators/interactions/">§3.5.4 Interactions</a></li><li class="nav-item" style="--depth: 1"><a href="../../cft/quant/">§3.7 Quantization and Fock</a></li><li class="nav-item" style="--depth: 0"><a href="../../cross-sect/">Chapter 4: Cross Sections</a></li><li class="nav-item" style="--depth: 0"><a href="../../feynman_diag/">Chapter 5: Feynman Diagrams</a></li><li class="nav-item" style="--depth: 0"><a href="../../spinors/">Chapter 6: Spinors</a></li><li class="nav-item" style="--depth: 1"><a href="../../spinors/cpt/">§6.3 CPT Theorem For Spinors</a></li><li class="nav-item" style="--depth: 2"><a href="../../spinors/cpt/charge/">§6.3.2 Charge invariance</a></li><li class="nav-item" style="--depth: 0"><a href="../../QED/">Chapter 7: Quantum Electrodynamics</a></li><li class="nav-item" style="--depth: 1"><a href="../../QED/interacting/">§7.2 Interacting QED</a></li><li class="nav-item active" style="--depth: 1"><a href="../../QED/gamma-identities/">§7.3 Gamma Matrix Identities</a></li><li class="nav-item" style="--depth: 0"><a href="../../renorm/">Chapter 8: Renormalization</a></li><li class="nav-item" style="--depth: 1"><a href="../../renorm/wilsonian/">§8.2 Wilsonian Renormalization</a></li><li class="nav-item" style="--depth: 0"><a href="../../qcd/">Chapter 9: Quantum Chromodynamics</a></li><li class="nav-item" style="--depth: 1"><a href="../../qcd/qcd-feyn/">§9.6 QCD Feynman Rules</a></li><li class="nav-item" style="--depth: 1"><a href="../../qcd/helicity/">§9.7 Helicity Spinors</a></li><li class="nav-item" style="--depth: 0"><a href="../../ew/">Chapter 10: Electroweak and SSB</a></li><li class="nav-item" style="--depth: 0"><a href="../../bibliography/">Bibliography</a></li></ul></nav></aside><main class="content" id="main"><h1 class="page-title">§7.3 Gamma Matrix Identities</h1><div class="page-source-heading"><h3 id="loc-1">7.3 Gamma Matrix Identities</h3></div><ul><li><p>There are some important identities involving the traces of the <math><mi>𝛾</mi></math> matrices that are almost essential for computing anything QED related</p></li><li><p>The following are some identities that are essential to know:</p></li><li><p>Cyclic property of trace (general matrices):</p></li><li><div class="display-math"><math display="block"><mtext>Tr</mtext><mo form="prefix" stretchy="false">(</mo><mi>𝐴</mi><mi>𝐵</mi><mi>…</mi><mi>𝐶</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mtext>Tr</mtext><mo form="prefix" stretchy="false">[</mo><mi>𝐵</mi><mi>…</mi><mi>𝐶</mi><mi>𝐴</mi><mo stretchy="false">]</mo></math></div></li><li><p>Gamma-5</p><span id="loc-2"></span><div class="thm-box thm-lemma" id="thm-lemma-7-3-1"><p class="thm-head"><strong>Lemma 7.3.1</strong>.</p><div class="display-math"><math display="block"><mtable class="multiline-equation"><mtr><mtd><msup><mi>𝛾</mi><mn>5</mn></msup><mo>=</mo><mi>𝑖</mi><msup><mi>𝛾</mi><mn>0</mn></msup><msup><mi>𝛾</mi><mn>1</mn></msup><msup><mi>𝛾</mi><mn>2</mn></msup><msup><mi>𝛾</mi><mn>3</mn></msup></mtd></mtr><mtr><mtd><mo stretchy="false">(</mo><msup><mi>𝛾</mi><mn>5</mn></msup><msup><mo form="postfix" stretchy="false">)</mo><mn>2</mn></msup><mo>=</mo><mn>1</mn><mo rspace="0em">,</mo><mspace width="1em"/><msup><mi>𝛾</mi><mn>5</mn></msup><msup><mi>𝛾</mi><mi>𝜇</mi></msup><mo>=</mo><mo form="prefix">−</mo><msup><mi>𝛾</mi><mi>𝜇</mi></msup><msup><mi>𝛾</mi><mn>5</mn></msup></mtd></mtr><mtr><mtd><mo stretchy="false">{</mo><msup><mi>𝛾</mi><mi>𝜇</mi></msup><mo>,</mo><msup><mi>𝛾</mi><mi>𝜈</mi></msup><mo form="postfix" stretchy="false">}</mo><mo>=</mo><mn>2</mn><msup><mi>𝑔</mi><mrow><mi>𝜇</mi><mi>𝜈</mi></mrow></msup><mi>𝕀</mi></mtd></mtr></mtable></math></div></div></li><li><p>Trace of gamma matrix <math><mo lspace="0em" rspace="0em">×</mo></math> identity</p><span id="loc-3"></span><div class="thm-box thm-lemma" id="thm-lemma-7-3-2"><p class="thm-head"><strong>Lemma 7.3.2</strong>.</p><div class="display-math"><math display="block"><mtable class="multiline-equation"><mtr><mtd><mtext>Tr</mtext><mo form="prefix" stretchy="false">[</mo><msup><mi>𝑔</mi><mrow><mi>𝜇</mi><mi>𝜈</mi></mrow></msup><mi>𝕀</mi><mo form="postfix" stretchy="false">]</mo><mo>=</mo><msup><mi>𝑔</mi><mrow><mi>𝜇</mi><mi>𝜈</mi></mrow></msup><mtext>Tr</mtext><mo form="prefix" stretchy="false">(</mo><mi>𝕀</mi><mo form="postfix" stretchy="false">)</mo><mo>=</mo><mn>4</mn><msup><mi>𝑔</mi><mrow><mi>𝜇</mi><mi>𝜈</mi></mrow></msup></mtd></mtr><mtr><mtd><mo form="infix" lspace="0em" stretchy="false">→</mo><mtext>Tr</mtext><mo form="prefix" stretchy="false">[</mo><msup><mi>𝛾</mi><mi>𝜇</mi></msup><mo form="postfix" stretchy="false">]</mo><mo>=</mo><mtext>Tr</mtext><mo form="prefix" stretchy="false">[</mo><msub><mi>𝛾</mi><mn>5</mn></msub><msub><mi>𝛾</mi><mn>5</mn></msub><msup><mi>𝛾</mi><mi>𝜇</mi></msup><mo stretchy="false">]</mo></mtd></mtr><mtr><mtd><mo form="infix" lspace="0em">=</mo><mtext>Tr</mtext><mo form="prefix" stretchy="false">[</mo><msub><mi>𝛾</mi><mn>5</mn></msub><msub><mi>𝛾</mi><mn>5</mn></msub><msup><mi>𝛾</mi><mi>𝜇</mi></msup><mo form="postfix" stretchy="false">]</mo><mo>=</mo><mtext>Tr</mtext><mo form="prefix" stretchy="false">[</mo><msup><mi>𝛾</mi><mi>𝜇</mi></msup><mo stretchy="false">]</mo></mtd></mtr><mtr><mtd><mo form="infix" lspace="0em" stretchy="false">→</mo><mtext>Tr</mtext><mo form="prefix" stretchy="false">[</mo><msup><mi>𝛾</mi><mi>𝜇</mi></msup><mo form="postfix" stretchy="false">]</mo><mo>=</mo><mn>0</mn></mtd></mtr></mtable></math></div></div></li><li><p>Trace of 2 gamma matrices:</p><span id="loc-4"></span><div class="thm-box thm-lemma" id="thm-lemma-7-3-3"><p class="thm-head"><strong>Lemma 7.3.3</strong>.</p><div class="display-math"><math display="block"><mtable class="multiline-equation"><mtr><mtd><mtext>Tr</mtext><mo form="prefix" stretchy="false">[</mo><msup><mi>𝛾</mi><mi>𝜇</mi></msup><msup><mi>𝛾</mi><mi>𝜈</mi></msup><mo form="postfix" stretchy="false">]</mo><mo>=</mo><mtext>Tr</mtext><mo form="prefix" stretchy="false">[</mo><mo form="prefix">−</mo><msup><mi>𝛾</mi><mi>𝜈</mi></msup><msup><mi>𝛾</mi><mi>𝜇</mi></msup><mo>+</mo><mn>2</mn><msup><mi>𝑔</mi><mrow><mi>𝜇</mi><mi>𝜈</mi></mrow></msup><mi>𝕀</mi><mo stretchy="false">]</mo></mtd></mtr><mtr><mtd><mo form="infix" lspace="0em">=</mo><mo form="prefix">−</mo><mspace width="0.2222em"/><mtext>Tr</mtext><mo form="prefix" stretchy="false">[</mo><msup><mi>𝛾</mi><mi>𝜇</mi></msup><msup><mi>𝛾</mi><mi>𝜈</mi></msup><mo form="postfix" stretchy="false">]</mo><mo>+</mo><mn>8</mn><msup><mi>𝑔</mi><mrow><mi>𝜇</mi><mi>𝜈</mi></mrow></msup></mtd></mtr><mtr><mtd><mo form="infix" lspace="0em" stretchy="false">⇒</mo><mtext>Tr</mtext><mo form="prefix" stretchy="false">[</mo><msup><mi>𝛾</mi><mi>𝜇</mi></msup><msup><mi>𝛾</mi><mi>𝜈</mi></msup><mo form="postfix" stretchy="false">]</mo><mo>=</mo><mn>4</mn><msup><mi>𝑔</mi><mrow><mi>𝜇</mi><mi>𝜈</mi></mrow></msup></mtd></mtr></mtable></math></div></div></li><li><p>Trace of 3 gamma matrices:</p><span id="loc-5"></span><div class="thm-box thm-lemma" id="thm-lemma-7-3-4"><p class="thm-head"><strong>Lemma 7.3.4</strong>.</p><div class="display-math"><math display="block"><mtext>Tr</mtext><mo form="prefix" stretchy="false">{</mo><msup><mi>𝛾</mi><mi>𝛼</mi></msup><msup><mi>𝛾</mi><mi>𝛽</mi></msup><msup><mi>𝛾</mi><mi>𝜇</mi></msup><mo form="postfix" stretchy="false">}</mo><mo>=</mo><mn>0</mn></math></div></div></li><li><p>Trace of 4 gamma matrices:</p><span id="loc-6"></span><div class="thm-box thm-lemma" id="thm-lemma-7-3-5"><p class="thm-head"><strong>Lemma 7.3.5</strong>.</p><div class="display-math"><math display="block"><mtext>Tr</mtext><mo form="prefix" stretchy="false">[</mo><msup><mi>𝛾</mi><mi>𝛼</mi></msup><msup><mi>𝛾</mi><mi>𝜇</mi></msup><msup><mi>𝛾</mi><mi>𝛽</mi></msup><msup><mi>𝛾</mi><mi>𝜈</mi></msup><mo form="postfix" stretchy="false">]</mo><mo>=</mo><mn>4</mn><mo form="prefix" stretchy="false">(</mo><msup><mi>𝑔</mi><mrow><mi>𝛼</mi><mi>𝜇</mi></mrow></msup><msup><mi>𝑔</mi><mrow><mi>𝛽</mi><mi>𝜈</mi></mrow></msup><mo>−</mo><msup><mi>𝑔</mi><mrow><mi>𝛼</mi><mi>𝜈</mi></mrow></msup><msup><mi>𝑔</mi><mrow><mi>𝜇</mi><mi>𝛽</mi></mrow></msup><mo>+</mo><msup><mi>𝑔</mi><mrow><mi>𝛼</mi><mi>𝜈</mi></mrow></msup><msup><mi>𝑔</mi><mrow><mi>𝜇</mi><mi>𝛽</mi></mrow></msup><mo stretchy="false">)</mo></math></div></div></li></ul><nav class="page-nav" aria-label="Previous and next pages"><a class="page-nav-card nav-prev" href="../../QED/interacting/"><span class="page-nav-arrow">←</span><span class="page-nav-kicker">Previous</span><span class="page-nav-title">§7.2 Interacting QED</span></a><a class="page-nav-card nav-next" href="../../renorm/"><span class="page-nav-kicker">Next</span><span class="page-nav-title">Chapter 8: Renormalization</span><span class="page-nav-arrow">→</span></a></nav></main><aside class="sidebar-right"><nav class="local-toc" aria-label="On this page"><h2>On This Page</h2><ul><li class="toc-heading" style="--toc-depth: 0"><a href="#loc-1">§7.3 Gamma Matrix Identities</a></li><li class="toc-theorem" style="--toc-depth: 1"><a href="#loc-2">Lemma 7.3.1</a></li><li class="toc-theorem" style="--toc-depth: 1"><a href="#loc-3">Lemma 7.3.2</a></li><li class="toc-theorem" style="--toc-depth: 1"><a href="#loc-4">Lemma 7.3.3</a></li><li class="toc-theorem" style="--toc-depth: 1"><a href="#loc-5">Lemma 7.3.4</a></li><li class="toc-theorem" style="--toc-depth: 1"><a href="#loc-6">Lemma 7.3.5</a></li></ul></nav></aside></div><div class="sidebar-backdrop" id="sidebar-backdrop"></div><script src="../../assets/site.js"></script><script src="../../assets/search.js"></script></body></html>
