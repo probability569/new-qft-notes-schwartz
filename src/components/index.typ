@@ -43,3 +43,4 @@
 
 #let lbl = explicit-label
 #let enum-lbl = explicit-label.with(metadata((type: "typst-enum-item-label")))
+
